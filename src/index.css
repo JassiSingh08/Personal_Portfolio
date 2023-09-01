@@ -1,13 +1,115 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.sidebar{
+  position: fixed;
+  margin-top: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  gap: 25px;
+  border: 1px solid black;
+  width: 5em;
+  border-radius: 25px;
+  padding: 15px;
+  height: 15em;
+  margin-left: 1em;
+}
+
+.sidebar .navs{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  gap: 25px;
+}
+
+.sidebar .navs a{
+  text-decoration: none;
+}
+.sidebar .navs a img{
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.sidebar li{
+  list-style-type: none;
+}
+
+.info-container{
+  display: grid;
+  place-items: center;
+  gap: 3em;
+  padding: 10em;
+}
+
+.info-container .first-info{
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.info-container .second-info{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.info-container .third-info{
+  font-size: 1.20rem;
+  line-height: 1.5rem;
+}
+
+.profile-pic-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.profile-pic {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  text-align: center; /* Center text within the container */
+  min-height: 85vh; /* Optional: Set a minimum height to make sure content is centered on the viewport */
+}
+
+.mern{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mern-bracket{
+ font-size: 1.25em;
+ font-weight: 100;
+}
+
+.mern-img{
+  width: 1em;
+  height: 1em;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating-icon p{
+  font-size: 4em;
+  line-height: 1em;
 }
