@@ -7,7 +7,7 @@ import node from "../Assets/node-js.svg"
 const MERN = () => {
 
   return (
-    <div className='mern'>
+    <div className='mern unselectable'>
         <div className="rotating-icon">
         <p>
         <span className='mern-bracket'>[</span> . . .<img src={Mongodb} alt="M" className='mern-img' /> {""}

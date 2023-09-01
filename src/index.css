@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.sidebar{
+.socials{
   position: fixed;
   margin-top: 60vh;
   display: flex;
@@ -19,7 +19,7 @@
   margin-left: 1em;
 }
 
-.sidebar .navs{
+.socials .navs{
   display: flex;
   flex-direction: column;
   justify-content:space-around;
@@ -27,15 +27,15 @@
   gap: 25px;
 }
 
-.sidebar .navs a{
+.socials .navs a{
   text-decoration: none;
 }
-.sidebar .navs a img{
+.socials .navs a img{
   width: 2.5em;
   height: 2.5em;
 }
 
-.sidebar li{
+.socials li{
   list-style-type: none;
 }
 
@@ -112,4 +112,13 @@
 .rotating-icon p{
   font-size: 4em;
   line-height: 1em;
+}
+
+/*prevent copy of icons for User experince*/
+.unselectable {   
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
