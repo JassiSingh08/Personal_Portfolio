@@ -5,16 +5,16 @@
 
 .socials{
   position: fixed;
-  margin-top: 60vh;
+  margin-top: 48vh;
   display: flex;
   flex-direction: column;
   justify-content:space-around;
   align-items: center;
-  gap: 25px;
+  gap: 22px;
   border: 1px solid black;
   width: 5em;
   border-radius: 25px;
-  padding: 15px;
+  padding: 14px 10px;
   height: 15em;
   margin-left: 1em;
 }
@@ -43,7 +43,7 @@
   display: grid;
   place-items: center;
   gap: 3em;
-  padding: 10em;
+  padding: 6em 6em 6em 8em;
 }
 
 .info-container .first-info{
@@ -80,7 +80,7 @@
   justify-content: center; /* Horizontal centering */
   align-items: center; /* Vertical centering */
   text-align: center; /* Center text within the container */
-  min-height: 85vh; /* Optional: Set a minimum height to make sure content is centered on the viewport */
+  min-height: 40vh; /* Optional: Set a minimum height to make sure content is centered on the viewport */
 }
 
 .mern{
@@ -121,4 +121,103 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 8.5vh;
+  border-radius: 30px;
+}
+
+.navshake{
+  animation: Navshake 1s infinite ;
+}
+
+.navbar ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+  gap: 2em;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: #000;
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.active {
+  margin: 0.35em;
+  border: 1px solid black;
+  width: 12vw;
+  border-radius: 30px;
+  
+}
+
+.open{
+  display: block;
+}
+.close{
+  display: none;
+}
+
+.header{
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 14vh;
+  padding: 0 2em;
+}
+
+.nav-button{
+  height: 4.5em;
+  width: 4.5em;
+  border: 0;
+  outline: 0;
+  border-radius: 50%;
+  background: #93d6f1;
+  z-index: 100;
+}
+
+/* Define a custom animation 
+@keyframes shake {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-10px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+}
+ */
+
+/* CSS */
+@keyframes Navshake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
