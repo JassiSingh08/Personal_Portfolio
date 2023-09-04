@@ -1,38 +1,36 @@
 import React from "react";
-
-function Card({ title, imageUrl }) {
-  return (
-    <div className="skill-container">
-      <div className="card">
-        <div className="face back">
-          <div className="content">
-            <span className="stars"></span>
-            <b className="desc"></b>
-            <p className="desc">
-              {" "}
-              <img src={imageUrl} alt={title} />
-            </p>
-          </div>
-        </div>
-        <div className="face front">
-          <b>{title}</b>
-        </div>
-      </div>
-    </div>
-  );
-}
+import { TypeAnimation } from "react-type-animation";
 
 const Skills = () => {
-  const cardData = [
-    { title: "FrontEnd", imageUrl: "url_to_image_1" },
-    { title: "BackEnd", imageUrl: "url_to_image_2" },
-    { title: "DevTools", imageUrl: "url_to_image_3" },
-  ];
   return (
-    <div className="card-flex">
-      {cardData.map((data, index) => (
-        <Card key={index} title={data.title} imageUrl={data.imageUrl} />
-      ))}
+    <div class="card-container">
+      <div class="card">
+        <div class="front-content">
+          <p>
+            {" "}
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                "Tech Stack I Work With",
+                1000, // wait 1s before replacing
+                "OH!",
+                700,
+                "Languages I Speak" ,
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ fontSize: "2.5em", display: "inline-block" }}
+              repeat={Infinity}
+            />
+            ~
+          </p>
+        </div>
+        <div class="content">
+          <p class="heading"></p>
+          <p></p>
+        </div>
+      </div>
     </div>
   );
 };
