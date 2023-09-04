@@ -1,5 +1,5 @@
 import React from 'react'
-import profile_pic from "../Assets/Profile_Pic.jpeg"
+import profile_pic from "../Assets/Profile_Pic.png"
 import MERN from './MERN';
 
 const Home = () => {
