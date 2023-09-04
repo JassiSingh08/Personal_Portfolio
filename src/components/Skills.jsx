@@ -1,6 +1,6 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import html from "../Assets/HTML.png";
+import html from "../Assets/html.png";
 import css from "../Assets/css.png";
 import js from "../Assets/js.png";
 import Mongodb from "../Assets/mongodb.png";
