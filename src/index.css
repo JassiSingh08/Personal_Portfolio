@@ -9,6 +9,8 @@ body {
   color: #e8e8e8;
 }
 
+/* SOCAILS */
+
 .socials {
   position: fixed;
   margin-top: 48vh;
@@ -46,6 +48,73 @@ body {
   list-style-type: none;
 }
  */
+
+
+/* HOME CONTAINER CSS */
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 72vh;
+}
+
+
+.flyinTxtCont {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-bottom: 10%;
+  margin-left: 2em;
+}
+
+.flyIn {
+  color: #fff;
+  font-family: 'Raleway';
+  text-transform: uppercase;
+  line-height: 1.2em;
+  position: relative;
+  text-shadow: 2px 2px 40px rgba(0, 0, 0, 0.7);
+}
+
+.lineOne {
+  font-size: 110px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  transition-delay: .2s;
+  transition: .4s ease in;
+  animation: txtFlyIn .5s linear;
+}
+
+
+.lineFour {
+  transition-delay: 2s;
+  transition: 2s ease in;
+  animation: fadeIn 2s linear;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  color: #000;
+  box-sizing: border-box;
+  max-width: 65%;
+  max-width: 24em;
+  font-size: 30px;
+  padding: .2em .5em;
+  margin-top: 30px;
+}
+
 .info-container {
   display: grid;
   place-items: center;
@@ -70,6 +139,8 @@ body {
   transition: .6s ease in;
   animation: txtFlyIn .6s linear;
 }
+
+/* HOME DP */
 
 .profile-pic-container {
   width: 300px;
@@ -104,17 +175,7 @@ body {
   }
 }
 
-.home-container {
-  display: flex;
-  justify-content: center;
-  /* Horizontal centering */
-  align-items: center;
-  /* Vertical centering */
-  text-align: center;
-  /* Center text within the container */
-  min-height: 72vh;
-  /* Optional: Set a minimum height to make sure content is centered on the viewport */
-}
+/* MERN COMPONENT CSS */
 
 .mern {
   display: flex;
@@ -158,6 +219,8 @@ body {
   user-select: none;
 }
 
+/* NAVBAR + NAV BUTTON */
+
 .navbar {
   background: #93d6f1;
   display: flex;
@@ -168,6 +231,7 @@ body {
   border-radius: 30px;
 }
 
+/* class for nav shaking */
 .navshake {
   animation: Navshake 1s infinite;
 }
@@ -177,7 +241,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  /* list-style-type: none; */
   gap: 2em;
 }
 
@@ -190,7 +253,7 @@ body {
   align-items: center;
 }
 
-
+/* to show active tab in navbar */
 .active {
   margin: 0.35em;
   border: 1px solid black;
@@ -199,6 +262,7 @@ body {
   background: #fff;
 }
 
+/* show or hide navbar */
 .open {
   display: block;
 }
@@ -207,6 +271,7 @@ body {
   display: none;
 }
 
+/* Container for nav and nav button */
 .header {
   width: 50vw;
   display: flex;
@@ -226,28 +291,6 @@ body {
   z-index: 100;
 }
 
-/* CSS */
-@keyframes Navshake {
-  0% {
-    transform: translateX(0);
-  }
-
-  25% {
-    transform: translateX(-5px);
-  }
-
-  50% {
-    transform: translateX(5px);
-  }
-
-  75% {
-    transform: translateX(-5px);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
 
 /* skills cards */
 
@@ -498,88 +541,37 @@ body {
   }
 }
 
-/* 00 */
-
-body {
-  background: #000;
-}
-
 .cater3-movingBG {
   height: 100%;
-    /* background-image: url(http://salsaritas.johngroupinteractive.com/wp-content/uploads/2017/06/enchilada-bg.jpg);
-    background-size: 125%;
-    background-repeat: repeat-x; 
-  animation: animatedBackground 15s linear alternate infinite; */
 }
-/* 
-@keyframes animatedBackground {
+
+/* ANIMATION KEYFRAMES */
+
+/* Keyframe for navshake class */
+@keyframes Navshake {
   0% {
-    background-position: 0 0;
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
   }
 
   50% {
-    background-position: 50% 0;
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
   }
 
   100% {
-    background-position: 0 0;
+    transform: translateX(0);
   }
-} */
-
-.flyinTxtCont {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding-bottom: 10%;
-  margin-left: 2em;
-}
-
-.flyIn {
-  color: #fff;
-  font-family: 'Raleway';
-  text-transform: uppercase;
-  line-height: 1.2em;
-  position: relative;
-  text-shadow: 2px 2px 40px rgba(0, 0, 0, 0.7);
-}
-
-.lineOne {
-  font-size: 110px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  transition-delay: .2s;
-  transition: .4s ease in;
-  animation: txtFlyIn .5s linear;
 }
 
 
-.lineFour {
-  transition-delay: 2s;
-  transition: 2s ease in;
-  animation: fadeIn 2s linear;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-  display: inline-block;
-  color: #000;
-  box-sizing: border-box;
-  max-width: 65%;
-  max-width: 24em;
-  font-size: 30px;
-  padding: .2em .5em;
-  margin-top: 30px;
-}
-
+/* keyframe for typing text container fade */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -590,6 +582,7 @@ body {
   }
 }
 
+/* keyframe for animating text */
 @keyframes txtFlyIn {
   0% {
     transform: translateX(-100%);
@@ -599,6 +592,8 @@ body {
     transform: translateX(0%);
   }
 }
+
+/* keyframe for animating dp */
 @keyframes ppFlyIn {
   0% {
     transform: translateX(100%);
