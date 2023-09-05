@@ -9,9 +9,34 @@ const Home = () => {
       <div className="home-container">
         <div className="info-container">
           <div className="first-info">
-            <h1>JASSI SINGH</h1>
+            {/*  */}
+            <div class="cater3-movingBG">
+              <div class="flyinTxtCont">
+                <div class="flyIn lineOne">Jassi Singh</div>
+                <div class="flyIn lineFour">
+                {/* <div class="flyIn lineTwo">Singh </div> */}
+                <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed out once, initially
+                  "Frontend Developer",
+                  1000, // wait 1s before replacing
+                  "Backend Developer",
+                  1000,
+                  "Sometimes Both ~",
+                  500,
+                  "FullStack Developer",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{ fontSize: "0.9em", display: "inline-block" }}
+                repeat={Infinity}
+              />                </div>
+              </div>
+              {/*  */}
+            </div>
           </div>
-          <div className="second-info">
+          {/* <div className="second-info">
             <p>
               <TypeAnimation
                 sequence={[
@@ -31,7 +56,7 @@ const Home = () => {
                 repeat={Infinity}
               />
             </p>
-          </div>
+          </div> */}
           <div className="third-info">
             I build accessible, inclusive products and digital experiences for
             the web.
