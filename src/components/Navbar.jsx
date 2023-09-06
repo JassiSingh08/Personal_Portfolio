@@ -24,7 +24,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className={`left-container ${darkMode ? `darkTheme` : ``}`}>
+      <div className={`left-container ${darkMode ? `darkTheme` : `smooth`}`}>
         <div className="sidebar">
           <button
             className="nav-button"

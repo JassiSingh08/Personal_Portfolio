@@ -4,7 +4,7 @@ import React from "react";
 const AboutMe = () => {
   const myStyle = {
     fontSize: "1em",
-    color: "#00ccff",
+    color: "var(--accent-color)",
     fontStyle: "italic",
     cursor: "pointer",
     textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
@@ -13,7 +13,7 @@ const AboutMe = () => {
   const myStye2 = {
     textTransform: "uppercase",
     fontSize: "2em",
-    color: "#00ccff",
+    color: "var(--accent-color)",
     fontFamily: "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
     fontStyle: "italic",
     margin: "0 5px",

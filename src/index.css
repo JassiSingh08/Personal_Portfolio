@@ -15,8 +15,15 @@ body {
   color: #000;
   /* background-color: #e8e8e8; */
   background-color: #fff;
+}
+.darkTheme {
+  background-color: #000;
+  color: #e8e8e8;
+  transition: all 0.4s ease;
+}
 
-
+.smooth{
+  transition: background-color 0.45s ease, color 0.45s ease;
 }
 
 /* SOCAILS */
@@ -27,10 +34,6 @@ body {
   display: flex;
 }
 
-.darkTheme {
-  background-color: #000;
-  color: #e8e8e8;
-}
 
 .sidebar {
   width: 4.1em;
@@ -76,7 +79,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   border-radius: 10%;
-  border-left: 15px solid #00ccff;
+  border-left: 15px solid var(--accent-color);
   padding: 4em 0 2em 0;
   height: 70%;
 }
@@ -239,7 +242,7 @@ body {
   color: #000;*/
 
   /* Added later */
-  background-color: #00ccff;
+  background-color : var(--accent-color);
   color: #000;
   border-radius: 20px;
   /*  */
@@ -286,7 +289,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
-  background: #00ccff;
+  background: var(--accent-color);
 }
 
 .profile-pic {
@@ -360,7 +363,7 @@ body {
 /* NAVBAR + NAV BUTTON */
 
 .navbar {
-  background: #00ccff;
+  background: var(--accent-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -425,7 +428,7 @@ body {
   border: 0;
   outline: 0;
   border-radius: 50%;
-  background: #00ccff;
+  background: var(--accent-color);
   z-index: 100;
 }
 
@@ -587,7 +590,7 @@ input:checked + .slider:before {
 
 .circle1,
 .circle2 {
-  background: #00ccff;
+  background: var(--accent-color);
   border-radius: 50%;
 }
 
@@ -602,7 +605,7 @@ input:checked + .slider:before {
 }
 
 .line {
-  background: #00ccff;
+  background: var(--accent-color);
   height: 0.4em;
   width: 50vw;
   border-radius: 20px;
@@ -645,7 +648,7 @@ p,
 .Aboutme p span {
   text-transform: uppercase;
   font-size: 2em;
-  color: #00ccff;
+  color : var(--accent-color);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-style: italic;
   margin: 0 5px;
