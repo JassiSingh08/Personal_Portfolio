@@ -242,7 +242,7 @@ body {
   color: #000;*/
 
   /* Added later */
-  background-color : var(--accent-color);
+  background-color : var(--accent-color) ;
   color: #000;
   border-radius: 20px;
   /*  */

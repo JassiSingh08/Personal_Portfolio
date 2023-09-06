@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { DarkContext } from "../context/ThemeContext";
 
 const LightToDark = () => {
-  const { toggleTheme, AccentColors, toggleAccentColors } =
+  const { toggleTheme, AccentColors, toggleAccentColors, resetAccentColor } =
     useContext(DarkContext);
   const handleClick = () => {
     toggleTheme();
@@ -20,12 +20,13 @@ const LightToDark = () => {
         <input type="checkbox" onClick={handleClick} />
         <span class="slider"></span>
       </label>
-      {/* <input
+      <input
         type="color"
         id="accentColorPicker"
         value={AccentColors}
         onChange={handleAccentColorChange}
-      /> */}
+      />
+      <button onClick={resetAccentColor}>Reset</button>
     </div>
   );
 };

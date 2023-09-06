@@ -11,6 +11,8 @@ const ThemeContext = (props) => {
 
   // for AccentColors
   const [AccentColors, setAccentColors] = useState("#00ccff");
+  const defaultColor = "#00ccff";
+
   const toggleAccentColors = (color) => {
     setAccentColors(color);
   };
@@ -19,10 +21,14 @@ const ThemeContext = (props) => {
     "--accent-color": AccentColors,
   };
 
+  const resetAccentColor = () => {
+    setAccentColors(defaultColor)
+  }
+
   return (
     <div>
       <DarkContext.Provider
-        value={{ darkMode, toggleTheme, AccentColors, toggleAccentColors }}
+        value={{ darkMode, toggleTheme, AccentColors, toggleAccentColors, resetAccentColor }}
       >
         <div style={themeStyles}> {props.children}</div>
       </DarkContext.Provider>
