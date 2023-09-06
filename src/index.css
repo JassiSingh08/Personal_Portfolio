@@ -493,6 +493,7 @@ body {
 /* The slider */
 .slider {
   --background: #28096b;
+  transform: rotate(-90deg);
   position: absolute;
   cursor: pointer;
   top: 0;
