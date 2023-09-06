@@ -35,11 +35,11 @@ const SkillsAgain = () => {
       <div className="skill-heading">
         <TypeAnimation
           sequence={[
-            "Tech Stack I Work With",
+            "Tech Stack I Work With:",
             1000, // wait 1s before replacing
             "OH!",
             700,
-            "Languages I Speak:",
+            "Languages I Speak :)",
             2000,
           ]}
           wrapper="span"

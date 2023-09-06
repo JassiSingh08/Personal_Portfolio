@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,300&family=Roboto:wght@300;400;700&family=Varela+Round&family=Wavefont:wght@200;400;500;700&display=swap');
 * {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+/* BEFORE THEME BLUE : 93d6f1  // AFTER THEME BLUE : 00ccff */
+
 body {
-  background-color: #000;
-  color: #e8e8e8;
+  /* background-color: #000;
+  color: #e8e8e8; */
+
+  color: #000;
+  background-color: #e8e8e8;
+
+
 }
 
 /* SOCAILS */
@@ -18,11 +26,13 @@ body {
 }
 
 .sidebar {
-  width: 4.1em; /* Adjust the width of the sidebar as needed */
+  width: 4.1em;
+  /* Adjust the width of the sidebar as needed */
   background-color: #000;
   padding: 1em 1em 1em 0.8em;
   position: fixed;
-  height: 100%; /* Make it full height */
+  height: 100%;
+  /* Make it full height */
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -35,27 +45,36 @@ body {
 }
 
 .scrollable-content {
-  max-height: 100%; /* Set a maximum height for scrolling */
-  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  max-height: 100%;
+  /* Set a maximum height for scrolling */
+  overflow-y: auto;
+  /* Enable vertical scrolling if content overflows */
   padding: 10px;
 }
+
 /*  */
-.s-c{
+.s-c {
   width: 86em;
   margin-left: 5em;
   overflow-x: hidden;
 }
 
-.skill-corousel{
+.am-c{
+  padding: 5.5em 0 4em 0;
+  height: 40vh;
+}
+
+/*  */
+.skill-corousel {
   width: 100%;
   overflow-x: hidden;
   border-radius: 10%;
-  border-left: 15px solid #00ccff;  
+  border-left: 15px solid #00ccff;
   padding: 4em 0 2em 0;
   height: 70%;
 }
-/*  */
 
+/*  */
 .card {
   position: relative;
   display: flex;
@@ -78,7 +97,10 @@ body {
   cursor: pointer;
 }
 
-.card .social-link1,.card .social-link2,.card .social-link3,.card .social-link4 {
+.card .social-link1,
+.card .social-link2,
+.card .social-link3,
+.card .social-link4 {
   position: relative;
   display: flex;
   align-items: center;
@@ -96,28 +118,25 @@ body {
 }
 
 .card .social-link1:hover {
-  background: #f09433;
-  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  background-color: #1a1e22;
   animation: bounce_613 0.4s linear;
 }
 
 .card .social-link2:hover {
-  background-color: #00ccff;
+  background-color: #0a66c2;
   animation: bounce_613 0.4s linear;
 }
 
 .card .social-link3:hover {
-  background-color: #5865f2;
+  background-color: #0059f7;
   animation: bounce_613 0.4s linear;
 }
 
 .card .social-link4:hover {
-  background-color: #12a50b;
+  background-color: #1d4292;
   animation: bounce_613 0.4s linear;
 }
+
 
 @keyframes bounce_613 {
   40% {
@@ -169,12 +188,11 @@ body {
 }
 
 .flyIn {
-  color: #fff;
+  /* color: #fff; */
   font-family: 'Raleway';
   text-transform: uppercase;
   line-height: 1.2em;
   position: relative;
-  text-shadow: 2px 2px 40px rgba(0, 0, 0, 0.7);
   letter-spacing: 0.2em;
 }
 
@@ -182,16 +200,28 @@ body {
   font-size: 110px;
   font-weight: bold;
   letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   transition-delay: .2s;
   transition: .4s ease in;
   animation: txtFlyIn .5s linear;
 }
 
-.animate{
+
+/* Specially for animation other elements */
+.animate {
   transition-delay: .2s;
   transition: .4s ease in;
   animation: txtFlyIn .5s linear;
 }
+
+.animate-divider {
+  transition-delay: .2s;
+  transition: .4s ease in;
+  animation: width .5s linear;
+}
+
+
+/*  */
 
 .lineFour {
   transition-delay: 2s;
@@ -202,7 +232,7 @@ body {
   color: #000;*/
 
   /* Added later */
-  background-color:#93d6f1; 
+  background-color: #00ccff;
   color: #000;
   border-radius: 20px;
   /*  */
@@ -249,7 +279,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
-  background: #93d6f1;
+  background: #00ccff;
 }
 
 .profile-pic {
@@ -323,7 +353,7 @@ body {
 /* NAVBAR + NAV BUTTON */
 
 .navbar {
-  background: #93d6f1;
+  background: #00ccff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -388,7 +418,7 @@ body {
   border: 0;
   outline: 0;
   border-radius: 50%;
-  background: #93d6f1;
+  background: #00ccff;
   z-index: 100;
 }
 
@@ -406,9 +436,10 @@ body {
 }
 
 .skill-heading {
-  height: 15vh;
+  height: 10vh;
   display: flex;
   justify-content: center;
+  padding-top: 20px;
 }
 
 .skill-pic-container {
@@ -705,13 +736,101 @@ body {
   }
 }
 
+@keyframes width {
+  0% {
+    transform-origin: left center; /* Set the origin to the left */
+    transform: scaleX(0);
+  }
+  100% {
+    transform-origin: left center;
+    transform: scaleX(1);
+  }
+}
 
-.progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 10px;
-  background: var(--red);
-  transform-origin: 0%;
+
+
+/* DIVIDER  */
+
+.divider {
+  position: relative;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  margin-left: 8em;
+}
+
+.circle1,
+.circle2 {
+  background: #00ccff;
+  border-radius: 50%;
+}
+
+.circle1 {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.circle2 {
+  width: 0.8em;
+  height: 0.8em;
+}
+
+.line {
+  background: #00ccff;
+  height: 0.4em;
+  width: 50vw;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.Aboutme {
+  word-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 2em 2em 7em;
+  font-size: 1.3em;
+  font-family: 'Varela Round', sans-serif;
+  /* font-size: 2.5em; */
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Wavefont', cursive; */
+
+}
+
+.Aboutme,
+p,
+.aboutme-info {
+  padding: 0.5em;
+  font-size: 600;
+}
+
+.aboutme-info2 {
+  padding: 0 1em;
+  word-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+
+  font-size: 27px;
+  padding: .2em .5em;
+  margin-top: 15px;
+}
+
+.Aboutme p span {
+  text-transform: uppercase;
+  font-size: 2em;
+  color: #00ccff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  margin: 0 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.am-pic {
+  width: 100%;
+}
+
+.am-pic img {
+  width: 300px;
+  height: 250px;
 }

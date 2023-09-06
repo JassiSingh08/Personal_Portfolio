@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Home from "./Home";
 import SkillsAgain from "./SkillsAgain";
+import AboutMe from "./AboutMe";
 
 const Navbar = () => {
   const [active, setActive] = useState("myself");
@@ -127,8 +128,11 @@ const Navbar = () => {
         </div>
         <div className="content">
           <Home />
+          <div className="am-c">
+            <AboutMe />
+          </div>
           <div className="s-c">
-            <SkillsAgain/>
+            <SkillsAgain />
           </div>
         </div>
       </div>
