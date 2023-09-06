@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Home from "./Home";
 import SkillsAgain from "./SkillsAgain";
 import AboutMe from "./AboutMe";
+import {DarkContext} from "../context/ThemeContext";
+import LightToDark from   "../components/LightToDark";
 
 const Navbar = () => {
+  const { darkMode } = useContext(DarkContext);
   const [active, setActive] = useState("myself");
   const [navOpen, setNavOpen] = useState(false);
   const [isShaking, setIsShaking] = useState(false);
@@ -21,7 +24,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="left-container">
+      <div className={`left-container ${darkMode ? `darkTheme` : ``}`}>
         <div className="sidebar">
           <button
             className="nav-button"
@@ -55,6 +58,9 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
+          {/* DARK THEME TOGGLE  */}
+          <LightToDark/>
+          {/*  */}
           <div className="card">
             <a className="social-link1">
               <svg

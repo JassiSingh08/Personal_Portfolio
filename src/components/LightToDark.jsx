@@ -1,34 +1,21 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { DarkContext } from "../context/ThemeContext";
 
 const LightToDark = () => {
+  const { toggleTheme } = useContext(DarkContext);
+  const handleClick = () => {
+    toggleTheme();
+  };
+
+  // onClick={handleClick}
   return (
     <div>
-      <label for="theme" className="theme">
-        <span className="theme__toggle-wrap">
-          <input
-            id="theme"
-            className="theme__toggle"
-            type="checkbox"
-            role="switch"
-            name="theme"
-            value="dark"
-          />
-          <span className="theme__fill"></span>
-          <span className="theme__icon">
-            <span className="theme__icon-part"></span>
-            <span className="theme__icon-part"></span>
-            <span className="theme__icon-part"></span>
-            <span className="theme__icon-part"></span>
-            <span className="theme__icon-part"></span>
-            <span className="theme__icon-part"></span>
-            <span className="theme__icon-part"></span>
-            <span className="theme__icon-part"></span>
-            <span className="theme__icon-part"></span>
-          </span>
-        </span>
+      <label class="switch">
+        <input type="checkbox" onClick={handleClick} />
+        <span class="slider"></span>
       </label>
     </div>
   );
-}
+};
 
-export default LightToDark
+export default LightToDark;
