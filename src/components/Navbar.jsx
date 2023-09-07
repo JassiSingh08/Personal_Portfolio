@@ -4,6 +4,7 @@ import SkillsAgain from "./SkillsAgain";
 import AboutMe from "./AboutMe";
 import { DarkContext } from "../context/ThemeContext";
 import LightToDark from "../components/LightToDark";
+import Projects from "./Projects";
 
 const Navbar = () => {
   const { darkMode } = useContext(DarkContext);
@@ -118,6 +119,9 @@ const Navbar = () => {
           </div>
           <div className="s-c">
             <SkillsAgain />
+          </div>
+          <div className="s-c">
+            <Projects />
           </div>
         </div>
       </div>
