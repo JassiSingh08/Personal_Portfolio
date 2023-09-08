@@ -120,7 +120,7 @@ const Navbar = () => {
           <div className="s-c">
             <SkillsAgain />
           </div>
-          <div className="s-c">
+          <div className="pc-c">
             <Projects />
           </div>
         </div>

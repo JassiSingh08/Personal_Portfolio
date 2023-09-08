@@ -32,9 +32,6 @@ const AboutMe = () => {
         <div className="line animate-divider"></div>
       </div>
       <div className="Aboutme">
-        {/* <p>
-          <span>Who Am I?</span>
-        </p> */}
         <div className="aboutme-info">
           <p style={{ textAlign: "center" }}>
             <span>Jassi Singh</span> <br />A Software Developer based in New
