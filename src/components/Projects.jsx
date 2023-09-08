@@ -3,7 +3,7 @@ import slideData from "../data/SlideData";
 import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
-  const categories = ["All", "Frontend", "Mern Projects"];
+  const categories = ["All", "Frontend", "MERN"];
   const [selectedCategory, setselectedCategory] = useState("All");
 
   // function to handle category selection
