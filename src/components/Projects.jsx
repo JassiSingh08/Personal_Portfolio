@@ -1,6 +1,4 @@
 import React from "react";
-import profile from "../Assets/Profile_Pic.jpeg";
-import slideData from "../data/SlideData";
 
 const Projects = () => {
   return (

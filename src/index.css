@@ -806,6 +806,7 @@ svg#curve {
 
 .connection.github .icon {
   background-image: url(./Assets/github-mark-white.png);
+  background-size: contain;
 }
 
 .connection.open-link .icon {
