@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Contact from "../Assets/AboutmePIC.png";
 
 const ContactMe = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   return (
     <div className="contact-me">
       <div className="contact-container">
@@ -45,9 +45,9 @@ const ContactMe = () => {
           </div>
           <button>Send Message →</button>
         </form>
-      </div>
-      <div className="cm-img">
-        <img src={Contact} alt="Contact" />
+        <div className="cm-img">
+          <img src={Contact} alt="Contact" />
+        </div>
       </div>
     </div>
   );
