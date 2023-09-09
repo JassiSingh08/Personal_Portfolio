@@ -5,6 +5,7 @@ import AboutMe from "./AboutMe";
 import { DarkContext } from "../context/ThemeContext";
 import LightToDark from "../components/LightToDark";
 import Projects from "./Projects";
+import ContactMe from "./ContactMe";
 
 const Navbar = () => {
   const { darkMode } = useContext(DarkContext);
@@ -122,6 +123,9 @@ const Navbar = () => {
           </div>
           <div className="pc-c">
             <Projects />
+          </div>
+          <div className="cm-c">
+            <ContactMe />
           </div>
         </div>
       </div>
