@@ -1,68 +1,24 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Home from "./Home";
 import SkillsAgain from "./SkillsAgain";
 import AboutMe from "./AboutMe";
 import { DarkContext } from "../context/ThemeContext";
-import LightToDark from "../components/LightToDark";
+import LightToDark from "./LightToDark";
 import Projects from "./Projects";
 import ContactMe from "./ContactMe";
 
-const Navbar = () => {
+const Main = ({toggleNav}) => {
   const { darkMode } = useContext(DarkContext);
-  const [active, setActive] = useState("myself");
-  const [navOpen, setNavOpen] = useState(false);
-  const [isShaking, setIsShaking] = useState(false);
 
-  const handleDrawer = () => {
-    setNavOpen(!navOpen);
-    setIsShaking(true);
-    setTimeout(() => {
-      setIsShaking(false);
-    }, 1000);
-  };
-
-  const handleActive = (link) => {
-    setActive(link);
-  };
   return (
     <>
       <div className={`left-container ${darkMode ? `darkTheme` : `smooth`}`}>
+
         <div className="sidebar">
-          <button
-            className="nav-button"
-            onClick={() => handleDrawer()}
-          ></button>
-          <div
-            className={`navbar ${navOpen ? "open" : "close"} ${
-              isShaking ? "navshake" : ""
-            } `}
-          >
-            <ul>
-              <li className={active === "myself" ? "active" : ""}>
-                <a href="#myself" onClick={() => handleActive("myself")}>
-                  ITS ME
-                </a>
-              </li>
-              <li className={active === "skills" ? "active" : ""}>
-                <a href="#skills" onClick={() => handleActive("skills")}>
-                  SKILLS
-                </a>
-              </li>
-              <li className={active === "projects" ? "active" : ""}>
-                <a href="#projects" onClick={() => handleActive("projects")}>
-                  PROJECTS
-                </a>
-              </li>
-              <li className={active === "contact" ? "active" : ""}>
-                <a href="#contact" onClick={() => handleActive("contact")}>
-                  CONTACT ME
-                </a>
-              </li>
-            </ul>
-          </div>
           {/* DARK THEME TOGGLE  */}
           <LightToDark />
           {/*  */}
+          <button className="nav-button" onClick={() => toggleNav()}>ClICK ME</button>
           <div className="card">
             <a className="social-link1">
               <svg
@@ -133,4 +89,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Main;

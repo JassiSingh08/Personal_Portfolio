@@ -16,9 +16,9 @@ const LightToDark = () => {
   // onClick={handleClick}
   return (
     <div>
-      <label class="switch">
+      <label className="switch">
         <input type="checkbox" onClick={handleClick} />
-        <span class="slider"></span>
+        <span className="slider"></span>
       </label>
       <input
         type="color"

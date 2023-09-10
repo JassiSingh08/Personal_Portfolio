@@ -1,28 +1,23 @@
+import { useState } from "react";
 import "./App.css";
-import AboutMe from "./components/AboutMe";
-import Divider from "./components/Divider";
-import Navbar from "./components/Navbar";
-import {ThemeContext} from "./context/ThemeContext";
-// import Check from "./components/check";
-// import Home from "./components/Home";
-// import Skills from "./components/Skills";
-// import SkillsAgain from "./components/SkillsAgain";
-// import Socials from './components/Socials';
+import Main from "./components/Main";
+import Nav from "./components/Nav";
+import { ThemeContext } from "./context/ThemeContext";
 
 function App() {
+  const [isNavOpen, setNavOpen] = useState(true);
+
+  // Function to toggle the Nav component
+  const toggleNav = () => {
+    setNavOpen(!isNavOpen);
+  };
+
   return (
     <>
       <ThemeContext>
-        <Navbar />
+        <Nav isNavOpen={isNavOpen} />
+        <Main toggleNav={toggleNav} />
       </ThemeContext>
-      {/* <Divider/> */}
-      {/* <AboutMe /> */}
-      {/* <Check/> */}
-      {/* <LightToDark/> */}
-      {/* <Home /> */}
-      {/* <Socials /> */}
-      {/* <Skills/> */}
-      {/* <SkillsAgain/> */}
     </>
   );
 }
