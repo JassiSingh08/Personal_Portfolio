@@ -28,15 +28,6 @@ const Projects = () => {
       };
   return (
     <>
-{/*       <div className="divider">
-        <div className="circle1"></div>
-        <div className="circle2"></div>
-        <div className="text-head">
-          {" "}
-          <span style={myStye2}>Who Am I?</span>
-        </div>
-        <div className="line animate-divider"></div>
-      </div> */}
       <div className="container">
         <div className="tabs">
           {categories.map((category, index) => (

@@ -1,8 +1,9 @@
 const slideData = [
   {
-    name: "Project 1",
+    name: "Ai Image Generator",
     src: "https://picsum.photos/500/600",
     category: "Frontend", // Add the category property
+    gitLink: "https://github.com/JassiSingh08/ai-image-generator"
   },
   {
     name: "Project 2",
@@ -29,7 +30,6 @@ const slideData = [
     src: "https://picsum.photos/500/600",
     category: "MERN", // Add the category property
   },
-  // Add more projects with their respective categories...
 ];
 
 export default slideData;

@@ -694,17 +694,17 @@ input:checked+.slider:before {
 }
 
 .center {
-  transform: scale(1.5);
+  width: 25vw;
   display: inline-flex;
+  overflow: hidden;
   user-select: none;
-  margin-left: 0.5em;
   margin-bottom: 5em;
-  padding: 0 4em;
+  border-radius: 20px;
 }
 
 .article-card {
-  width: 250px;
-  height: 170px;
+  width: 350px;
+  height: 250px;
   margin: 0.8em 0.25em;
   border-radius: 20px;
   overflow: hidden;
@@ -714,7 +714,7 @@ input:checked+.slider:before {
   transition: all 300ms;
 }
 
-.article-card:hover {
+.article-card:hover{
   transform: translateY(-2px);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
@@ -753,33 +753,36 @@ input:checked+.slider:before {
 }
 
 
-.article-card .date,
+.article-card .sub-title,
 .article-card .title,
 .article-card .content-link {
+  font-family: 'Varela Round', sans-serif;
   margin: 0;
   position: relative;
-  bottom: -70px;
+  bottom: -100px;
 }
 
-.article-card .date {
-  font-size: 10px;
+.article-card .sub-title {
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.9);
   padding: 2px 0;
 }
 
 .article-card .title {
-  font-size: 17px;
+  letter-spacing: 1px;
+  font-size: 21px;
   color: #fff;
 }
 
 .article-card .content-link {
-  font-size: 10px;
+  /* font-size: 15px; */
   color: #fff;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1em;
+  padding-left: 8px;
 }
 
 .project-card-container {
@@ -787,9 +790,9 @@ input:checked+.slider:before {
   height: 50vh;
 }
 
-.article-card:hover .date,
+.article-card:hover .sub-title,
 .article-card:hover .title {
-  transform: translateY(-75px);
+  transform: translateY(-100px);
   transition: all 1s cubic-bezier(.46, 1.48, .18, .81);
   transition-delay: 0.1s;
 }
@@ -797,8 +800,8 @@ input:checked+.slider:before {
 
 .content-link .icon1,
 .content-link .icon2 {
-  height: 25px;
-  width: 25px;
+  height: 38px;
+  width: 38px;
   background-color: #fff;
   border-radius: 50%;
   position: relative;
@@ -807,7 +810,7 @@ input:checked+.slider:before {
 
 .article-card:hover .content-link .icon1,
 .article-card:hover .content-link .icon2 {
-  transform: translateY(-75px);
+  transform: translateY(-100px);
   transition: all 1s cubic-bezier(.46, 1.48, .18, .81);
 }
 
@@ -820,14 +823,14 @@ input:checked+.slider:before {
 
 
 .content-link .icon2 a{
-  padding-top: 2.5px;
+  padding-top: 3.2px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .content-link .icon2 img {
-  width: 70%;
+  width: 80%;
   height: 70%;
   margin: auto;
 }

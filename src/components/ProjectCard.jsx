@@ -10,11 +10,11 @@ const ProjectCard = ({ data, key }) => {
         <div className="project-content">
           <div className="content-title">
             <p className="title">{data.name}</p>
-            <p className="date">{data.category}</p>
+            <p className="sub-title">~ {data.category}</p>
           </div>
           <div className="content-link">
             <div className="icon1">
-              <a href="/" target="_blank">
+              <a href={data.gitLink} target="_blank">
                 <img src={github} alt="github" />
               </a>
             </div>
@@ -27,7 +27,7 @@ const ProjectCard = ({ data, key }) => {
         </div>
         <img src={data.src} alt={data.name} />
       </div>
-    </div>
+     </div>
   );
 };
 
