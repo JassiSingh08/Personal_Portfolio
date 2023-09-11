@@ -17,39 +17,35 @@ const Nav = ({isNavOpen}) => {
         <div className="side-nav-menu">
           <ul className="side-nav-menu-links">
             <li className="nav-link">
-              <a href="#">
+              <a href="#home">
                 <i className="bx bx-side-nav-home-alt icon" />
-                <span className="text nav-text">Dashboard</span>
+                <span className="text nav-text">Home</span>
               </a>
             </li>
             <li className="nav-link">
-              <a href="#">
+              <a href="#about">
                 <i className="bx bx-bar-chart-alt-2 icon" />
-                <span className="text nav-text">Revenue</span>
+                <span className="text nav-text">About</span>
               </a>
             </li>
             <li className="nav-link">
-              <a href="#">
+              <a href="#skills">
                 <i className="bx bx-bell icon" />
-                <span className="text nav-text">Notifications</span>
+                <span className="text nav-text">Skills</span>
               </a>
             </li>
             <li className="nav-link">
-              <a href="#">
+              <a href="#projects">
                 <i className="bx bx-pie-chart-alt icon" />
-                <span className="text nav-text">Analytics</span>
+                <span className="text nav-text">
+                  Projects
+                </span>
               </a>
             </li>
             <li className="nav-link">
-              <a href="#">
+              <a href="#contact">
                 <i className="bx bx-heart icon" />
-                <span className="text nav-text">Likes</span>
-              </a>
-            </li>
-            <li className="nav-link">
-              <a href="#">
-                <i className="bx bx-wallet icon" />
-                <span className="text nav-text">Wallets</span>
+                <span className="text nav-text">Contact Me</span>
               </a>
             </li>
           </ul>

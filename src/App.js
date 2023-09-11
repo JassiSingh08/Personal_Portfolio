@@ -4,6 +4,7 @@ import Main from "./components/Main";
 import Nav from "./components/Nav";
 import { ThemeContext } from "./context/ThemeContext";
 
+
 function App() {
   const [isNavOpen, setNavOpen] = useState(true);
 

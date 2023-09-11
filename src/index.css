@@ -6,6 +6,10 @@
   list-style-type: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* BEFORE THEME BLUE : 93d6f1  // AFTER THEME BLUE : 00ccff */
 
 body {
@@ -52,7 +56,7 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width: 10%;
   padding: 10px 14px;
   background: var(--sidenavbar-color);
   transition: var(--tran-05);

@@ -7,18 +7,19 @@ import LightToDark from "./LightToDark";
 import Projects from "./Projects";
 import ContactMe from "./ContactMe";
 
-const Main = ({toggleNav}) => {
+const Main = ({ toggleNav }) => {
   const { darkMode } = useContext(DarkContext);
 
   return (
     <>
       <div className={`left-container ${darkMode ? `darkTheme` : `smooth`}`}>
-
         <div className="sidebar">
           {/* DARK THEME TOGGLE  */}
           <LightToDark />
           {/*  */}
-          <button className="nav-button" onClick={() => toggleNav()}>ClICK ME</button>
+          <button className="nav-button" onClick={() => toggleNav()}>
+            ClICK ME
+          </button>
           <div className="card">
             <a className="social-link1">
               <svg
@@ -69,18 +70,18 @@ const Main = ({toggleNav}) => {
             </a>
           </div>
         </div>
-        <div className="content">
+        <div id="home" className="content">
           <Home />
-          <div className="am-c">
+          <div id="about" className="am-c">
             <AboutMe />
           </div>
-          <div className="s-c">
+          <div id="skills" className="s-c">
             <SkillsAgain />
           </div>
-          <div className="pc-c">
+          <div id="projects" className="pc-c">
             <Projects />
           </div>
-          <div className="cm-c">
+          <div id="contact" className="cm-c">
             <ContactMe />
           </div>
         </div>
