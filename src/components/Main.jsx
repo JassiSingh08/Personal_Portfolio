@@ -6,20 +6,26 @@ import { DarkContext } from "../context/ThemeContext";
 import LightToDark from "./LightToDark";
 import Projects from "./Projects";
 import ContactMe from "./ContactMe";
+import { Divide as Hamburger } from "hamburger-react";
 
-const Main = ({ toggleNav }) => {
+const Main = ({ toggleNav, isClicked, setClicked }) => {
   const { darkMode } = useContext(DarkContext);
 
   return (
     <>
       <div className={`left-container ${darkMode ? `darkTheme` : `smooth`}`}>
         <div className="sidebar">
+          <div className="nav-hambgr" onClick={toggleNav}>
+            <Hamburger
+              color="#e8e8e8"
+              rounded
+              toggled={isClicked}
+              toggle={setClicked}
+            />
+          </div>
           {/* DARK THEME TOGGLE  */}
           <LightToDark />
           {/*  */}
-          <button className="nav-button" onClick={() => toggleNav()}>
-            ClICK ME
-          </button>
           <div className="card">
             <span className="social-link1">
               <svg

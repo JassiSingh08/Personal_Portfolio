@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import { DarkContext } from "../context/ThemeContext";
 
-const Nav = ({ isNavOpen, setNavOpen }) => {
+
+const Nav = ({ isNavOpen, setNavOpen, toggleHamClick }) => {
+
+  const { darkMode } = useContext(DarkContext);
+
   const closeNavbar = () => {
     setNavOpen(!isNavOpen);
+    toggleHamClick()
   };
-
+  
   return (
     <>
       <div
-        className={`side-nav-bar ${isNavOpen ? "close" : ""}`}
+        className={`side-nav-bar ${isNavOpen ? "close" : ""} `}
         onClick={() => closeNavbar()}
       >
         <div className="header">
