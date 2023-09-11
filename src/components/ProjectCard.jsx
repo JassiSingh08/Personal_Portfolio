@@ -2,9 +2,9 @@ import React from "react";
 import github from "../Assets/github-mark.png";
 import openLink from "../Assets/open-link2.png";
 
-const ProjectCard = ({ data, key }) => {
+const ProjectCard = ({ data }) => {
   return (
-    <div key={key} className="center">
+    <div className="center">
       <div className="article-card">
         <div className="article-card-blur"></div>
         <div className="project-content">
@@ -14,7 +14,7 @@ const ProjectCard = ({ data, key }) => {
           </div>
           <div className="content-link">
             <div className="icon1">
-              <a href={data.gitLink} target="_blank">
+              <a href={data.gitLink} target="_blank" rel="noreferrer">
                 <img src={github} alt="github" />
               </a>
             </div>

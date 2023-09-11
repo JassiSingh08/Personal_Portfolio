@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <ThemeContext>
-        <Nav isNavOpen={isNavOpen} />
+        <Nav isNavOpen={isNavOpen} setNavOpen={setNavOpen} />
         <Main toggleNav={toggleNav} />
       </ThemeContext>
     </>

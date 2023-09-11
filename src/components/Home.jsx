@@ -10,11 +10,11 @@ const Home = () => {
         <div className="info-container">
           <div className="first-info">
             {/*  */}
-            <div class="cater3-movingBG">
-              <div class="flyinTxtCont">
-                <div class="flyIn lineOne">Jassi Singh</div>
-                <div class="flyIn lineFour">
-                {/* <div class="flyIn lineTwo">Singh </div> */}
+            <div className="cater3-movingBG">
+              <div className="flyinTxtCont">
+                <div className="flyIn lineOne">Jassi Singh</div>
+                <div className="flyIn lineFour">
+                {/* <div className="flyIn lineTwo">Singh </div> */}
                 <TypeAnimation
                 sequence={[
                   // Same substring at the start will only be typed out once, initially

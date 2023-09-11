@@ -3,7 +3,6 @@ import Mongodb from "../Assets/mongodb.png";
 import express from "../Assets/Express.png";
 import reactPNG from "../Assets/React.png";
 import node from "../Assets/node-js.svg";
-import Check from "./check";
 
 const MERN = () => {
   return (
