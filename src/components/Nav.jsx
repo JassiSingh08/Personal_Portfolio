@@ -5,6 +5,7 @@ import { DarkContext } from "../context/ThemeContext";
 const Nav = ({ isNavOpen, setNavOpen, toggleHamClick }) => {
 
   const { darkMode } = useContext(DarkContext);
+  console.log(darkMode)
 
   const closeNavbar = () => {
     setNavOpen(!isNavOpen);

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import slideData from "../data/SlideData";
+import {slideData} from "../data/SlideData";
 import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
