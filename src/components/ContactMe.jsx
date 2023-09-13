@@ -25,7 +25,7 @@ const ContactMe = () => {
 
   return (
     <div className={`contact-me`}>
-      <div className={`contact-container  ${darkMode ? "darkTheme" : ""}`}>
+      <div className={`contact-container `}>
         <form className="form" ref={form} onSubmit={sendEmail}>
           <div className="descr cm-title">Hey, Let's Connect!</div>
           <div className="contact-input">

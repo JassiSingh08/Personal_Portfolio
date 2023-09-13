@@ -2,6 +2,7 @@ import React from "react";
 import profile_pic from "../Assets/Profile_Pic.png";
 import MERN from "./MERN";
 import { TypeAnimation } from "react-type-animation";
+import Socials from "./Socials";
 
 const Home = () => {
   return (
@@ -14,49 +15,29 @@ const Home = () => {
               <div className="flyinTxtCont">
                 <div className="flyIn lineOne">Jassi Singh</div>
                 <div className="flyIn lineFour">
-                {/* <div className="flyIn lineTwo">Singh </div> */}
-                <TypeAnimation
-                sequence={[
-                  // Same substring at the start will only be typed out once, initially
-                  "Frontend Developer",
-                  1000, // wait 1s before replacing
-                  "Backend Developer",
-                  1000,
-                  "Sometimes Both ~",
-                  500,
-                  "FullStack Developer",
-                  1000,
-                ]}
-                wrapper="span"
-                speed={50}
-                style={{ fontSize: "0.9em", display: "inline-block" }}
-                repeat={Infinity}
-              />                </div>
+                  {/* <div className="flyIn lineTwo">Singh </div> */}
+                  <TypeAnimation
+                    sequence={[
+                      // Same substring at the start will only be typed out once, initially
+                      "Frontend Developer",
+                      1000, // wait 1s before replacing
+                      "Backend Developer",
+                      1000,
+                      "Sometimes Both ~",
+                      500,
+                      "FullStack Developer",
+                      1000,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    style={{ fontSize: "0.9em", display: "inline-block" }}
+                    repeat={Infinity}
+                  />{" "}
+                </div>
               </div>
               {/*  */}
             </div>
           </div>
-          {/* <div className="second-info">
-            <p>
-              <TypeAnimation
-                sequence={[
-                  // Same substring at the start will only be typed out once, initially
-                  "Frontend Developer",
-                  1000, // wait 1s before replacing
-                  "Backend Developer",
-                  1000,
-                  "Sometimes Both ~",
-                  500,
-                  "FullStack Developer",
-                  1000,
-                ]}
-                wrapper="span"
-                speed={50}
-                style={{ fontSize: "2em", display: "inline-block" }}
-                repeat={Infinity}
-              />
-            </p>
-          </div> */}
           <div className="third-info">
             I build accessible, inclusive products and digital experiences for
             the web.
@@ -67,6 +48,9 @@ const Home = () => {
         </div>
       </div>
       <MERN />
+      <div className="socialShow">
+        <Socials />
+      </div>
     </>
   );
 };

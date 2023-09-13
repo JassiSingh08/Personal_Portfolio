@@ -4,7 +4,7 @@ import { DarkContext } from "../context/ThemeContext";
 // Components
 import LightToDark from "./LightToDark";
 import Socials from "./Socials";
-// PAGES 
+// PAGES
 import Home from "./Home";
 import AboutMe from "./AboutMe";
 import Skills from "./Skills";
@@ -29,7 +29,9 @@ const Main = ({ toggleNav, isClicked, setClicked }) => {
           {/* DARK THEME TOGGLE  */}
           <LightToDark />
           {/* Socails */}
-          <Socials />
+          <div className="socialHide">
+            <Socials />
+          </div>
         </div>
         <div id="home" className="content">
           <Home />
