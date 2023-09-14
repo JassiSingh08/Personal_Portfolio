@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import profile_pic from "../Assets/Profile_Pic.png";
 import MERN from "./MERN";
 import { TypeAnimation } from "react-type-animation";
 import Socials from "./Socials";
 import ColorPicker from "./ColorsMap";
+import CV from "../Assets/CV.png";
 
 const Home = ({ colorPickerOpen, handleColorPicker }) => {
   /*   const [colorPickerOpen, setcolorPickerOpen] = useState(true)
@@ -49,19 +50,30 @@ const Home = ({ colorPickerOpen, handleColorPicker }) => {
             I build accessible, inclusive products and digital experiences for
             the web.
           </div>
+          <div className="cv-icon">
+            <a
+              href="https://drive.google.com/file/d/1tPl03kKApRmBmnQItqNMgZXMz7_OQMK1/view?usp=drive_link"
+              download={true}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              <img src={CV} alt="CV" />
+            </a>
+          </div>
         </div>
         <div className="profile-pic-container">
           <img src={profile_pic} alt="profile_pic" className="profile-pic" />
         </div>
       </div>
-        <div
-          className={`colorPicker  ${
-            colorPickerOpen ? "close-ColorPicker" : "open-ColorPicker"
-          } `}
-        >
-          <div className="pickerblur" onClick={() => handleColorPicker()}></div>
-          <ColorPicker handleColorPicker={handleColorPicker} />
-        </div>
+      <div
+        className={`colorPicker  ${
+          colorPickerOpen ? "close-ColorPicker" : "open-ColorPicker"
+        } `}
+      >
+        <div className="pickerblur" onClick={() => handleColorPicker()}></div>
+        <ColorPicker handleColorPicker={handleColorPicker} />
+      </div>
       <MERN />
       <div className="socialShow">
         <Socials />

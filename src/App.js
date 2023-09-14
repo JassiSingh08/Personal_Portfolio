@@ -21,8 +21,16 @@ function App() {
   return (
     <div className="website-container">
       <ThemeContext>
-        <Nav isNavOpen={isNavOpen} setNavOpen={setNavOpen} toggleHamClick={toggleHamClick} />
-        <Main toggleNav={toggleNav} isClicked={isClicked} setClicked={setClicked} />
+        <Nav
+          isNavOpen={isNavOpen}
+          setNavOpen={setNavOpen}
+          toggleHamClick={toggleHamClick}
+        />
+        <Main
+          toggleNav={toggleNav}
+          isClicked={isClicked}
+          setClicked={setClicked}
+        />
       </ThemeContext>
     </div>
   );

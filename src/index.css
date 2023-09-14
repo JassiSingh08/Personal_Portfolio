@@ -11,13 +11,90 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ============== */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Main styles */
+body {
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+
+/* ============== */
+
 body {
   color: #000;
-  background-color: #fff;
+  /* background-color: #fff; */
+  /* color: #fff; */
+  /* background: url(./Assets/BG-VIDEO.gif); */
+  /* background-repeat:repeat;
+  background-size: contain; */
 }
 
 .darkTheme {
-  background-color: #212121 !important;
+  /* background-color: #000 !important; */
+  background: url(./Assets/ezgif.com-resize.gif);
+  background-repeat: repeat;
+  background-size: 200px;
   color: #e8e8e8 !important;
   transition: all 0.4s ease;
 }
@@ -43,6 +120,17 @@ body {
   --tran-03: all 0.3s ease;
   --tran-04: all 0.3s ease;
   --tran-05: all 0.3s ease;
+}
+
+.cv-icon{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cv-icon img{
+  width: 70px;
+  height: 70px;
 }
 
 /* ===== navbar ===== */
@@ -182,18 +270,17 @@ body {
 
 .sidebar {
   width: 4.1em;
-  /* Adjust the width of the sidebar as needed */
   background-color: #212121;
+  background: url(./Assets/ezgif.com-resize.gif);
+  background-size: contain;
   padding: 1em 1em 1em 0.8em;
   position: fixed;
   height: 100%;
-  /* Make it full height */
   overflow: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 100;
-  /* display: none; */
 }
 
 .content {
@@ -476,6 +563,7 @@ body {
   transition-delay: .4s;
   transition: .6s ease in;
   animation: txtFlyIn .6s linear;
+  margin-left: 4em;
 }
 
 /* HOME DP */
@@ -1205,6 +1293,16 @@ input:checked+.slider:before {
     width: auto;
   }
 
+  .cv-icon{
+    background: transparent;
+    border: none;
+  }
+  
+  .cv-icon img{
+    width: 60px;
+    height: 60px;
+  }
+
   .pickerblur {
     z-index: 0;
     position: absolute;
@@ -1217,7 +1315,8 @@ input:checked+.slider:before {
   .darkTheme {
     width: 100%;
     position: absolute;
-    border-right: 30px solid #212121;
+    border-right: 30px solid;
+    border-image: url(./Assets/ezgif.com-resize.gif);
     transition: all 0.1ms ease;
   }
 
@@ -1254,7 +1353,7 @@ input:checked+.slider:before {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap:5px
+    gap: 5px
   }
 
   .socialHide {
@@ -1386,6 +1485,7 @@ input:checked+.slider:before {
     font-size: 1.4em;
     padding: 0;
     overflow-y: hidden;
+    margin-left: 0;
   }
 
   .profile-pic-container {
@@ -1628,15 +1728,24 @@ input:checked+.slider:before {
   .smooth {
     transition: background-color 0.1ms ease, color 0.1s ease;
   }
-
-  .active {
-    margin: 0.35em;
-    border: 1px solid black;
-    width: 12vw;
-    border-radius: 30px;
-    background: var(--accent-color);
+  
+  .cv-icon{
+    background: transparent;
+    border: none;
+  }
+  
+  .cv-icon img{
+    width: 60px;
+    height: 60px;
   }
 
+  .sidebar .handleThemes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px
+  }
 
   /* Your CSS rules for extra small devices */
   .sidebar {
@@ -1778,6 +1887,7 @@ input:checked+.slider:before {
     font-size: 1.4em;
     padding: 0;
     overflow-y: hidden;
+    margin-left: 0;
   }
 
   .profile-pic-container {
@@ -2019,6 +2129,13 @@ input:checked+.slider:before {
     transition: background-color 0.1ms ease, color 0.1s ease;
   }
 
+  .sidebar .handleThemes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px
+  }
 
   /* Your CSS rules for extra small devices */
   .sidebar {
@@ -2163,6 +2280,7 @@ input:checked+.slider:before {
     font-size: 1.4em;
     padding: 0;
     overflow-y: hidden;
+    margin-left: 0;
   }
 
   .profile-pic-container {
@@ -2435,6 +2553,14 @@ input:checked+.slider:before {
     margin-bottom: 150em;
   }
 
+  .sidebar .handleThemes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px
+  }
+
   .center {
     width: 50vw;
     margin-bottom: 1em;
@@ -2583,7 +2709,7 @@ input:checked+.slider:before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:5px
+  gap: 5px
 }
 
 .reset-btn {
