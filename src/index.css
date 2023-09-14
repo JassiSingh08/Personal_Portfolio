@@ -24,7 +24,6 @@ body {
   transition: all 0.4s ease;
 }
 
-
 .smooth {
   transition: background-color 0.45s ease, color 0.45s ease;
 }
@@ -241,11 +240,7 @@ body {
 
 /* to show active tab in navbar */
 .active {
-  margin: 0.35em;
-  border: 1px solid black;
-  width: 12vw;
-  border-radius: 30px;
-  background: #fff;
+  display: none;
 }
 
 .scrollable-content {
@@ -970,7 +965,7 @@ input:checked+.slider:before {
   position: relative;
   background-color: #fff;
   box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
-  padding: 0.3em 1em 1em 1em;
+  /* padding: 0.3em 1em 1em 1em; */
   border-radius: 99px;
 }
 
@@ -986,43 +981,24 @@ input:checked+.slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 28px;
+  height: 50px;
   width: 100%;
   font-size: 1.4em;
   color: black;
   font-weight: 500;
   border-radius: 99px;
   cursor: pointer;
-  transition: color 0.15s ease-in;
-  padding-top: 15px;
-}
-
-
-/* .container input[type="radio"]:checked + label {
-  color: #185ee0;
-} */
-
-.container input[id="radio-1"]:checked~.glider {
-  transform: translateX(0);
-}
-
-.container input[id="radio-2"]:checked~.glider {
-  transform: translateX(100%);
-}
-
-.container input[id="radio-3"]:checked~.glider {
-  transform: translateX(200%);
+  transition: all 0.15s ease-in;
+  padding-top: 10px;
 }
 
 .glider {
-  position: absolute;
-  display: flex;
-  height: 55px;
-  width: 188px;
+  height: inherit;
+  width: 100%;
   background-color: var(--accent-color);
   z-index: 1;
   border-radius: 99px;
-  transition: 0.25s ease-out;
+  transition: all 0.25s ease-out;
 }
 
 @media (max-width: 700px) {
@@ -1224,9 +1200,12 @@ input:checked+.slider:before {
 
 @media (max-width: 575px) {
 
+
+
   * {
     width: auto;
   }
+
 
   .darkTheme {
     width: 100%;
@@ -1237,6 +1216,14 @@ input:checked+.slider:before {
 
   .smooth {
     transition: background-color 0.1ms ease, color 0.1s ease;
+  }
+
+  .active {
+    margin: 0.35em;
+    border: 1px solid black;
+    width: 12vw;
+    border-radius: 30px;
+    background: var(--accent-color);
   }
 
   /* Your CSS rules for extra small devices */
@@ -1508,27 +1495,411 @@ input:checked+.slider:before {
   }
 
   .tabs {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    position: relative;
-    padding: 0 0.5em 0.5em 0.5em;
-    transform: scale(0.9);
+    height: 70px;
+    transform: scale(0.8);
   }
 
   .tab {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 28px;
+    padding-top: 0;
+    height: 100%;
     width: 100%;
-    font-size: 1.4em;
-    padding: auto;
   }
-
 
   .glider {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--accent-color);
+    z-index: 1;
+    border-radius: 99px;
+    transition: all 0.25s ease-out;
+  }
+
+  /*  */
+
+  .center {
+    width: 50vw;
+    margin-bottom: 1em;
+  }
+
+  .article-card {
+    width: 300px;
+    height: 200px;
+  }
+
+  .article-card .project-content {
+    padding: 20px;
+    height: auto;
+    width: 100%;
+    bottom: -25px;
+  }
+
+  .article-card .sub-title {
+    font-size: 15px;
+    padding: 2px 0;
+  }
+
+  .article-card .title {
+    letter-spacing: 1px;
+    font-size: 20px;
+  }
+
+  .article-card .content-link {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    padding-left: 8px;
+    padding-bottom: 14px;
+    margin-bottom: 2px;
+  }
+
+
+
+  /*  */
+  .cm-c {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 2em;
+  }
+
+  .contact-me .cm-img {
     display: none;
   }
+
+  .contact-me {
+    padding: 0;
+    display: flex;
+    border-left: 20px solid var(--accent-color);
+  }
+
+  .contact-input,
+  .textarea {
+    margin: 1em 0 1em 0;
+    width: 280px;
+    position: relative;
+  }
+
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Your CSS rules for small devices */
+
+  * {
+    width: auto;
+  }
+
+  .darkTheme {
+    width: 100%;
+    position: absolute;
+    border-right: 30px solid #212121;
+    transition: all 0.1ms ease;
+  }
+
+  .smooth {
+    transition: background-color 0.1ms ease, color 0.1s ease;
+  }
+
+  .active {
+    margin: 0.35em;
+    border: 1px solid black;
+    width: 12vw;
+    border-radius: 30px;
+    background: var(--accent-color);
+  }
+
+
+  /* Your CSS rules for extra small devices */
+  .sidebar {
+    flex-direction: row;
+    height: 2.5em;
+    width: 100vw;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .socialHide {
+    display: none;
+  }
+
+  .socialShow {
+    display: block;
+  }
+
+  .card {
+    /* background-color: #000; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* place-items: center; */
+    height: 15vh;
+    width: 100%;
+  }
+
+  .card svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card .social-link1,
+  .card .social-link2,
+  .card .social-link3,
+  .card .social-link4 {
+    margin: 0.5em 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35%;
+  }
+
+  .social-link1 svg,
+  .social-link2 svg,
+  .social-link3 svg,
+  .social-link4 svg {
+    height: 55px;
+  }
+
+  .card .social-link1:hover svg,
+  .card .social-link2:hover svg,
+  .card .social-link3:hover svg,
+  .card .social-link4:hover svg {
+    user-select: none;
+  }
+
+  .card .social-link1:hover {
+    color: #000;
+    fill: #000;
+    background-color: #fff;
+  }
+
+
+  .card .social-link1 svg {
+    fill: #000;
+  }
+
+  .card .social-link2:hover,
+  .card .social-link3:hover,
+  .card .social-link4:hover {
+    background-color: #fff;
+    stroke: #000;
+    stroke-width: 1.2px;
+    animation: bounce_613 0.4s linear;
+  }
+
+  .side-nav-bar {
+    padding: 0;
+    position: fixed;
+    top: 10px;
+  }
+
+  .side-nav-bar li {
+    padding: 0.5em 0;
+    margin-top: 50px;
+  }
+
+
+
+  .side-nav-bar .text {
+    font-size: 2em;
+  }
+
+  .side-nav-bar li a {
+    margin-right: 75px;
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    padding: 1em 0.8em;
+  }
+
+  .home-container {
+    width: 100%;
+    overflow: hidden;
+    flex-direction: column-reverse;
+    margin-top: 3em;
+    padding: 0;
+
+  }
+
+  .info-container {
+    padding: 0;
+  }
+
+  .flyinTxtCont {
+    margin: 0;
+    margin-top: 0.5em;
+    padding-bottom: 2%;
+  }
+
+  .lineOne {
+    font-size: 54px;
+  }
+
+  .lineFour {
+    font-size: 20px;
+    padding-top: 10px;
+  }
+
+  .info-container .third-info {
+    margin-top: 15px;
+    font-size: 1.4em;
+    padding: 0;
+    overflow-y: hidden;
+  }
+
+  .profile-pic-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 1em 1em 1em;
+  }
+
+  .mern {
+    margin-top: 0;
+    width: 100%;
+    font-size: 0.9em;
+  }
+
+  .rotating-icon p {
+    font-size: 4em;
+    line-height: 1em;
+  }
+
+  .mern-bracket {
+    font-size: 0.9em;
+    font-weight: 100;
+  }
+
+  .mern-img {
+    width: 0.7em;
+    height: 0.7em;
+    animation: rotate 3s linear infinite;
+  }
+
+  .divider {
+    margin-top: 0;
+    margin-left: 0.9em;
+  }
+
+
+  .divider-heading {
+    text-transform: uppercase;
+    font-size: 1.6em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .line {
+    width: 40vw;
+  }
+
+  .am-c {
+    z-index: -100;
+    height: 45vh;
+    padding: 0;
+  }
+
+  .Aboutme {
+    font-size: 1.2em;
+    margin-left: 0;
+  }
+
+  .aboutme-info2 {
+    word-spacing: 1.8px;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    padding: .2em .01em;
+    margin-top: 5px;
+  }
+
+  .Aboutme p span {
+    font-size: 1.7em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .s-c {
+    width: 100%;
+    z-index: -100;
+    margin-left: 0;
+  }
+
+  .skill-container {
+    padding-bottom: 2em;
+    height: auto;
+    margin: 8em 0 5em 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skill-heading {
+    font-size: 0.7em;
+    height: 10vh;
+    display: flex;
+    padding-top: 20px;
+  }
+
+  .skill-pic-container {
+    width: 9em;
+    height: auto;
+    margin: 0.8em;
+  }
+
+  .skill-pic-container .image-name {
+    margin: 0.8em 0;
+    font-size: 20px;
+  }
+
+  .skill-pic {
+    width: 6em;
+    height: 6em;
+  }
+
+  .skill-corousel {
+    overflow-x: scroll;
+    padding: 4em 0 2em 0;
+    height: auto;
+  }
+
+  .pc-c {
+    z-index: -100;
+    padding: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .container {
+    margin-left: 0;
+    margin-bottom: 2em;
+    width: 100%;
+  }
+
+
+  .tabs {
+    height: 70px;
+    transform: scale(0.8);
+  }
+
+  .tab {
+    padding-top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .glider {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--accent-color);
+    z-index: 1;
+    border-radius: 99px;
+    transition: all 0.25s ease-out;
+  }
+
 
   /*  */
 
@@ -1595,18 +1966,471 @@ input:checked+.slider:before {
 
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
-  /* Your CSS rules for small devices */
-}
-
 @media (min-width: 768px) and (max-width: 991px) {
   /* Your CSS rules for medium devices */
+
+  * {
+    width: auto;
+  }
+
+  .darkTheme {
+    width: 100%;
+    position: absolute;
+    border-right: 30px solid #212121;
+    transition: all 0.1ms ease;
+  }
+
+  .smooth {
+    transition: background-color 0.1ms ease, color 0.1s ease;
+  }
+
+
+  /* Your CSS rules for extra small devices */
+  .sidebar {
+    flex-direction: row;
+    height: 2.5em;
+    width: 100vw;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .socialHide {
+    display: block;
+  }
+
+  .socialShow {
+    display: none;
+  }
+
+  .card {
+    /* background-color: #000; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* place-items: center; */
+    height: 5vh;
+    width: 95%;
+  }
+
+  .card svg {
+    position: relative;
+    height: 5vh;
+    width: 65%;
+  }
+
+  .card .social-link1,
+  .card .social-link2,
+  .card .social-link3,
+  .card .social-link4 {
+    margin: 0.5em 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35%;
+  }
+
+  .social-link1 svg,
+  .social-link2 svg,
+  .social-link3 svg,
+  .social-link4 svg {
+    height: 55px;
+  }
+
+  .card .social-link1:hover svg,
+  .card .social-link2:hover svg,
+  .card .social-link3:hover svg,
+  .card .social-link4:hover svg {
+    user-select: none;
+  }
+
+  .card .social-link1:hover {
+    color: #000;
+    fill: #000;
+    background-color: #fff;
+  }
+
+
+  .card .social-link1 svg {
+    fill: #000;
+  }
+
+  .card .social-link2:hover,
+  .card .social-link3:hover,
+  .card .social-link4:hover {
+    background-color: #fff;
+    stroke: #000;
+    stroke-width: 1.2px;
+    animation: bounce_613 0.4s linear;
+  }
+
+  .side-nav-bar {
+    padding: 0;
+    position: fixed;
+    top: 10px;
+  }
+
+  .side-nav-bar li {
+    padding: 0.5em 0;
+    margin-top: 50px;
+  }
+
+  .card .social-link1 svg {
+    fill: #fff;
+  }
+
+
+  .side-nav-bar .text {
+    font-size: 2em;
+  }
+
+  .side-nav-bar li a {
+    margin-right: 75px;
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    padding: 1em 0.8em;
+  }
+
+  .home-container {
+    width: 100%;
+    overflow: hidden;
+    flex-direction: column-reverse;
+    margin-top: 3em;
+    padding: 0;
+
+  }
+
+  .info-container {
+    padding: 0;
+  }
+
+  .flyinTxtCont {
+    margin: 0;
+    margin-top: 0.5em;
+    padding-bottom: 2%;
+  }
+
+  .lineOne {
+    font-size: 54px;
+  }
+
+  .lineFour {
+    font-size: 20px;
+    padding-top: 10px;
+  }
+
+  .info-container .third-info {
+    margin-top: 15px;
+    font-size: 1.4em;
+    padding: 0;
+    overflow-y: hidden;
+  }
+
+  .profile-pic-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 1em 1em 1em;
+  }
+
+  .mern {
+    margin-top: 0;
+    width: 100%;
+    font-size: 0.9em;
+  }
+
+  .rotating-icon p {
+    font-size: 4em;
+    line-height: 1em;
+  }
+
+  .mern-bracket {
+    font-size: 0.9em;
+    font-weight: 100;
+  }
+
+  .mern-img {
+    width: 0.7em;
+    height: 0.7em;
+    animation: rotate 3s linear infinite;
+  }
+
+  .divider {
+    margin-top: 0;
+    margin-left: 0.9em;
+  }
+
+
+  .divider-heading {
+    text-transform: uppercase;
+    font-size: 1.6em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .line {
+    width: 40vw;
+  }
+
+  .am-c {
+    z-index: -100;
+    height: 45vh;
+    padding: 0;
+  }
+
+  .Aboutme {
+    font-size: 1.2em;
+    margin-left: 0;
+  }
+
+  .aboutme-info2 {
+    word-spacing: 1.8px;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    padding: .2em .01em;
+    margin-top: 5px;
+  }
+
+  .Aboutme p span {
+    font-size: 1.7em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .s-c {
+    width: 100%;
+    z-index: -100;
+    margin-left: 0;
+  }
+
+  .skill-container {
+    padding-bottom: 2em;
+    height: auto;
+    margin: 2em 0 5em 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skill-heading {
+    font-size: 0.7em;
+    height: 5vh;
+    display: flex;
+    padding-top: 20px;
+  }
+
+  .skill-pic-container {
+    width: 9em;
+    height: auto;
+    margin: 0.8em;
+  }
+
+  .skill-pic-container .image-name {
+    margin: 0.8em 0;
+    font-size: 20px;
+  }
+
+  .skill-pic {
+    width: 6em;
+    height: 6em;
+  }
+
+  .skill-corousel {
+    overflow-x: scroll;
+    padding: 4em 0 2em 0;
+    height: auto;
+  }
+
+  .pc-c {
+    z-index: -100;
+    padding: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .container {
+    margin-left: 0;
+    margin-bottom: 2em;
+    width: 100%;
+  }
+
+
+  .tabs {
+    height: 70px;
+    transform: scale(0.8);
+  }
+
+  .tab {
+    padding-top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .glider {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--accent-color);
+    z-index: 1;
+    border-radius: 99px;
+    transition: all 0.25s ease-out;
+  }
+
+  /*  */
+
+  .center {
+    width: 50vw;
+    margin-bottom: 1em;
+  }
+
+  .article-card {
+    width: 500px;
+    height: 300px;
+  }
+
+  .article-card .project-content {
+    padding: 20px;
+    height: auto;
+    width: 100%;
+    bottom: -60px;
+  }
+
+  .article-card .sub-title {
+    font-size: 22px;
+    padding: 2px 0;
+  }
+
+  .article-card .title {
+    letter-spacing: 1px;
+    font-size: 30px;
+  }
+
+  .article-card .content-link {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+  }
+
+  .content-link .icon1,
+  .content-link .icon2 {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    bottom: 0px;
+  }
+
+  .article-card:hover .content-link .icon1,
+  .article-card:hover .content-link .icon2 {
+    transform: translateY(-120px);
+    transition: all 1s cubic-bezier(.46, 1.48, .18, .81);
+  }
+
+  .article-card:hover .sub-title,
+  .article-card:hover .title {
+    transform: translateY(-120px);
+    transition: all 1s cubic-bezier(.46, 1.48, .18, .81);
+    transition-delay: 0.1s;
+  }
+
+  /*  */
+  .cm-c {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 2em;
+  }
+
+  .contact-me .cm-img {
+    display: block;
+  }
+
+  .contact-me .cm-img img {
+    width: 500px;
+    height: 380px;
+  }
+
+  .form {
+    padding-left: 40px;
+  }
+
+  .contact-me {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    border-left: 20px solid var(--accent-color);
+  }
+
+  .contact-container {
+    gap: 0;
+  }
+
+  .contact-input,
+  .textarea {
+    margin: 1em 0 1em 0;
+    width: 280px;
+    position: relative;
+  }
+
+  .contact-container {
+    padding-top: 20px;
+    width: 85em;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* Your CSS rules for large devices */
+  
+  .center {
+    width: 50vw;
+    margin-bottom: 1em;
+  }
+
+  .article-card {
+    width: 600px;
+    height: 400px;
+  }
+
+  .article-card .project-content {
+    padding: 20px;
+    height: auto;
+    width: 100%;
+    bottom: -60px;
+  }
+
+  .article-card .sub-title {
+    font-size: 22px;
+    padding: 2px 0;
+  }
+
+  .article-card .title {
+    letter-spacing: 1px;
+    font-size: 30px;
+  }
+
 }
 
 @media (min-width: 1200px) {
-  /* Your CSS rules for extra large devices */
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .website-container {
+    max-width: 1200px;
+  }
+  .content{
+    margin: 0 auto;
+  }
 }

@@ -30,12 +30,12 @@ const Projects = () => {
                 checked={selectedCategory === category}
                 onChange={() => handleCategory(category)}
               />
-              <label className="tab" htmlFor={`radio-${index + 1}`}>
+              <label className={`tab ${selectedCategory === category ? 'glider' : ''}`} htmlFor={`radio-${index + 1}`}>
                 {category}
               </label>
             </React.Fragment>
           ))}
-          <span className="glider"></span>
+          {/* <span className="glider"></span> */}
         </div>
       </div>
       {filterCategories.map((slide, i) => (
