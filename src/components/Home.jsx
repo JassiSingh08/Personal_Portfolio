@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import profile_pic from "../Assets/Profile_Pic.png";
 import MERN from "./MERN";
 import { TypeAnimation } from "react-type-animation";
 import Socials from "./Socials";
+import ColorPicker from "./ColorsMap";
 
-const Home = () => {
+const Home = ({ colorPickerOpen, handleColorPicker }) => {
+  /*   const [colorPickerOpen, setcolorPickerOpen] = useState(true)
+
+  const handleColorPicker = () => {
+    setcolorPickerOpen(!colorPickerOpen)
+  }
+ */
   return (
     <>
       <div className="home-container">
@@ -47,6 +54,14 @@ const Home = () => {
           <img src={profile_pic} alt="profile_pic" className="profile-pic" />
         </div>
       </div>
+        <div
+          className={`colorPicker  ${
+            colorPickerOpen ? "close-ColorPicker" : "open-ColorPicker"
+          } `}
+        >
+          <div className="pickerblur" onClick={() => handleColorPicker()}></div>
+          <ColorPicker handleColorPicker={handleColorPicker} />
+        </div>
       <MERN />
       <div className="socialShow">
         <Socials />

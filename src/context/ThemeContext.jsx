@@ -5,6 +5,9 @@ const DarkContext = createContext();
 const ThemeContext = (props) => {
   // for darkMode
   const [darkMode, setDarkMode] = useState(false);
+  const [isRotated, setIsRotated] = useState(false);
+// to rotate reset btn in sidebar
+
   const toggleTheme = () => {
     setDarkMode(!darkMode);
   };
@@ -23,12 +26,13 @@ const ThemeContext = (props) => {
 
   const resetAccentColor = () => {
     setAccentColors(defaultColor)
+    setIsRotated(!isRotated);
   }
 
   return (
     <div>
       <DarkContext.Provider
-        value={{ darkMode, toggleTheme, AccentColors, toggleAccentColors, resetAccentColor }}
+        value={{ darkMode, toggleTheme, AccentColors, toggleAccentColors, resetAccentColor,isRotated }}
       >
         <div style={themeStyles}> {props.children}</div>
       </DarkContext.Provider>

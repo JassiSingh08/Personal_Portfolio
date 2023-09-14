@@ -11,8 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* BEFORE THEME BLUE : 93d6f1  // AFTER THEME BLUE : 00ccff */
-
 body {
   color: #000;
   background-color: #fff;
@@ -47,7 +45,7 @@ body {
   --tran-05: all 0.3s ease;
 }
 
-/* ===== Sidebar ===== */
+/* ===== navbar ===== */
 .side-nav-bar {
   position: fixed;
   top: 0;
@@ -55,6 +53,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 10px 14px;
+  padding: 10px 0;
   background: var(--sidenavbar-color);
   transition: var(--tran-05);
   z-index: 100;
@@ -753,12 +752,14 @@ input:checked+.slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2em 2em 2em 7em;
+  margin: 2em 2em 2em 4em;
   font-size: 1.3em;
   font-family: 'Varela Round', sans-serif;
   /* font-size: 2.5em; */
   /* font-family: 'Roboto', sans-serif; */
   /* font-family: 'Wavefont', cursive; */
+  border-left: 15px solid var(--accent-color);
+  border-radius: 5%;
 
 }
 
@@ -1200,12 +1201,18 @@ input:checked+.slider:before {
 
 @media (max-width: 575px) {
 
-
-
   * {
     width: auto;
   }
 
+  .pickerblur {
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+    width: calc(100% + 100px);
+    opacity: 0.5;
+    transition: opacity 0.15s ease-in;
+  }
 
   .darkTheme {
     width: 100%;
@@ -1213,6 +1220,11 @@ input:checked+.slider:before {
     border-right: 30px solid #212121;
     transition: all 0.1ms ease;
   }
+
+  .darkTheme .colorPicker {
+    margin-bottom: 157em;
+  }
+
 
   .smooth {
     transition: background-color 0.1ms ease, color 0.1s ease;
@@ -1228,13 +1240,21 @@ input:checked+.slider:before {
 
   /* Your CSS rules for extra small devices */
   .sidebar {
+    position: fixed;
     flex-direction: row;
     height: 2.5em;
     width: 100vw;
-    position: absolute;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+  }
+
+  .sidebar .handleThemes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:5px
   }
 
   .socialHide {
@@ -1430,12 +1450,15 @@ input:checked+.slider:before {
     font-size: 18px;
     padding: .2em .01em;
     margin-top: 5px;
+    margin-left: 15px;
   }
 
   .Aboutme p span {
     font-size: 1.7em;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-left: 15px;
+
   }
 
   .s-c {
@@ -1597,6 +1620,11 @@ input:checked+.slider:before {
     transition: all 0.1ms ease;
   }
 
+  .darkTheme .colorPicker {
+    position: absolute;
+    margin-bottom: 148.4em;
+  }
+
   .smooth {
     transition: background-color 0.1ms ease, color 0.1s ease;
   }
@@ -1615,7 +1643,7 @@ input:checked+.slider:before {
     flex-direction: row;
     height: 2.5em;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
@@ -1980,6 +2008,13 @@ input:checked+.slider:before {
     transition: all 0.1ms ease;
   }
 
+
+  .darkTheme .colorPicker {
+    position: absolute;
+    margin-bottom: 151.2em;
+  }
+
+
   .smooth {
     transition: background-color 0.1ms ease, color 0.1s ease;
   }
@@ -1990,7 +2025,7 @@ input:checked+.slider:before {
     flex-direction: row;
     height: 2.5em;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
@@ -2390,7 +2425,16 @@ input:checked+.slider:before {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  
+
+  .darkTheme {
+    position: absolute;
+  }
+
+  .darkTheme .colorPicker {
+    position: absolute;
+    margin-bottom: 150em;
+  }
+
   .center {
     width: 50vw;
     margin-bottom: 1em;
@@ -2420,17 +2464,143 @@ input:checked+.slider:before {
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1199px) and (max-width: 1499px) {
+  .darkTheme {
+    position: absolute;
+  }
+
+  .darkTheme .colorPicker {
+    margin-bottom: 150em;
+  }
+
+}
+
+@media (min-width: 2000px) {
+
+
+  .darkTheme {
+    position: absolute;
+    margin: auto;
+  }
+
+  .darkTheme .colorPicker {
+    margin-bottom: 200em;
+  }
+
   body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    max-width: 1200px;
   }
 
   .website-container {
-    max-width: 1200px;
+    min-width: 1200px;
   }
-  .content{
+
+  .content {
     margin: 0 auto;
+  }
+
+  .center {
+    width: 20vw;
+    margin-bottom: 1em;
+  }
+
+  .article-card {
+    width: 600px;
+    height: 400px;
+  }
+}
+
+
+.colorPicker {
+  z-index: 5;
+  position: relative;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  inset: 0; */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%, -50%);
+  justify-content: center;
+}
+
+.pickerblur {
+  z-index: 0;
+  position: absolute;
+  height: calc(100% + 100px);
+  ;
+  width: 98.9vw;
+  opacity: 0.5;
+  transition: opacity 0.15s ease-in;
+}
+
+
+
+.ColorMap {
+  animation: colorPickerOpen 0.2s linear;
+}
+
+.close-ColorPicker {
+  display: none;
+}
+
+.open-ColorPicker {
+  display: block;
+  position: absolute;
+  display: flex;
+  inset: 0;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes colorPickerOpen {
+  0% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 1;
+  }
+
+}
+
+.colormap-btn {
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  width: 35px;
+  height: 35px;
+  border: 3px solid white;
+  cursor: pointer;
+}
+
+.handleThemes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:5px
+}
+
+.reset-btn {
+  border: none;
+  background: transparent;
+}
+
+.rotate {
+  animation: rotate360 0.5s linear;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

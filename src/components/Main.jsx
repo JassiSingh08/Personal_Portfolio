@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Divide as Hamburger } from "hamburger-react";
 import { DarkContext } from "../context/ThemeContext";
 // Components
@@ -13,6 +13,11 @@ import ContactMe from "./ContactMe";
 
 const Main = ({ toggleNav, isClicked, setClicked }) => {
   const { darkMode } = useContext(DarkContext);
+  const [colorPickerOpen, setcolorPickerOpen] = useState(true);
+
+  const handleColorPicker = () => {
+    setcolorPickerOpen(!colorPickerOpen);
+  };
 
   return (
     <>
@@ -27,14 +32,21 @@ const Main = ({ toggleNav, isClicked, setClicked }) => {
             />
           </div>
           {/* DARK THEME TOGGLE  */}
-          <LightToDark />
+          
+          <div className="handleThemes">
+            <LightToDark handleColorPicker={handleColorPicker} />
+          </div>
+
           {/* Socails */}
           <div className="socialHide">
             <Socials />
           </div>
         </div>
         <div id="home" className="content">
-          <Home />
+          <Home
+            colorPickerOpen={colorPickerOpen}
+            handleColorPicker={handleColorPicker}
+          />
           <div id="about" className="am-c">
             <AboutMe />
           </div>
