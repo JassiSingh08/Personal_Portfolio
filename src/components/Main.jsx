@@ -10,6 +10,7 @@ import AboutMe from "./AboutMe";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import ContactMe from "./ContactMe";
+import BackToTop from "./BackToTop";
 
 const Main = ({ toggleNav, isClicked, setClicked }) => {
   const { darkMode } = useContext(DarkContext);
@@ -43,6 +44,7 @@ const Main = ({ toggleNav, isClicked, setClicked }) => {
           </div>
         </div>
         <div id="home" className="content">
+        <BackToTop/>
           <Home
             colorPickerOpen={colorPickerOpen}
             handleColorPicker={handleColorPicker}
