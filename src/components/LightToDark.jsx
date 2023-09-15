@@ -18,10 +18,7 @@ const LightToDark = ({ handleColorPicker }) => {
 
   return (
     <>
-      <label className="switch">
-        <input type="checkbox" onClick={handleClick} />
-        <span className="slider"></span>
-      </label>
+      <input type="checkbox" className="l" onClick={handleClick} ></input>
       {/*       <input
         type="color"
         id="accentColorPicker"

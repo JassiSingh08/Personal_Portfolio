@@ -8,6 +8,7 @@ const AboutMe = () => {
     fontStyle: "italic",
     cursor: "pointer",
     textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
+    textdecoration: "none"
   };
 
 
@@ -36,7 +37,7 @@ const AboutMe = () => {
               someone with knowledge of Frontend, Backend Technologies, User
               Interface Libraries and want a Team Player for your projects, or
               your firm let's connect over a virtual Tea/Coffee Meeting.{" "}
-              <span style={myStyle}>More?</span>
+              <span style={myStyle}><a href="#contact">More?</a></span>
             </p>
           </div>
         </div>
