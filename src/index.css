@@ -122,13 +122,13 @@ body {
   --tran-05: all 0.3s ease;
 }
 
-.cv-icon{
+.cv-icon {
   background: transparent;
   border: none;
   cursor: pointer;
 }
 
-.cv-icon img{
+.cv-icon img {
   width: 70px;
   height: 70px;
 }
@@ -420,6 +420,15 @@ body {
 .card .social-link1 svg {
   fill: #fff;
 }
+
+/* .darkTheme .card .social-link1 svg {
+  fill: #fff;
+}
+
+.darkTheme .card .social-link1:hover svg {
+  fill: #000;
+}
+ */
 
 .card .social-link1:hover,
 .card .social-link2:hover,
@@ -877,7 +886,7 @@ input:checked+.slider:before {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.aboutme-info2 p span a{
+.aboutme-info2 p span a {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--accent-color);
@@ -1302,12 +1311,12 @@ input:checked+.slider:before {
     width: auto;
   }
 
-  .cv-icon{
+  .cv-icon {
     background: transparent;
     border: none;
   }
-  
-  .cv-icon img{
+
+  .cv-icon img {
     width: 60px;
     height: 60px;
   }
@@ -1334,16 +1343,16 @@ input:checked+.slider:before {
   }
 
 
-  .smooth {
-    transition: background-color 0.1ms ease, color 0.1s ease;
+  .darkTheme .card .social-link1 svg {
+    fill: #fff;
   }
 
-  .active {
-    margin: 0.35em;
-    border: 1px solid black;
-    width: 12vw;
-    border-radius: 30px;
-    background: var(--accent-color);
+  .darkTheme .card .social-link1:hover svg {
+    fill: #000;
+  }
+
+  .smooth {
+    transition: background-color 0.1ms ease, color 0.1s ease;
   }
 
   /* Your CSS rules for extra small devices */
@@ -1355,6 +1364,7 @@ input:checked+.slider:before {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    overflow: hidden;
   }
 
   .sidebar .handleThemes {
@@ -1465,7 +1475,7 @@ input:checked+.slider:before {
     width: 100%;
     overflow: hidden;
     flex-direction: column-reverse;
-    margin-top: 3em;
+    margin-top: 3.5em;
     padding: 0;
 
   }
@@ -1734,16 +1744,25 @@ input:checked+.slider:before {
     margin-bottom: 148.4em;
   }
 
+
+  .darkTheme .card .social-link1 svg {
+    fill: #fff;
+  }
+
+  .darkTheme .card .social-link1:hover svg {
+    fill: #000;
+  }
+
   .smooth {
     transition: background-color 0.1ms ease, color 0.1s ease;
   }
-  
-  .cv-icon{
+
+  .cv-icon {
     background: transparent;
     border: none;
   }
-  
-  .cv-icon img{
+
+  .cv-icon img {
     width: 60px;
     height: 60px;
   }
@@ -1753,9 +1772,10 @@ input:checked+.slider:before {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 5px
+    gap: 5px;
+    
   }
-
+  
   /* Your CSS rules for extra small devices */
   .sidebar {
     flex-direction: row;
@@ -1765,6 +1785,7 @@ input:checked+.slider:before {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    overflow: hidden;
   }
 
   .socialHide {
@@ -1867,7 +1888,7 @@ input:checked+.slider:before {
     width: 100%;
     overflow: hidden;
     flex-direction: column-reverse;
-    margin-top: 3em;
+    margin-top: 3.5em;
     padding: 0;
 
   }
@@ -2134,6 +2155,15 @@ input:checked+.slider:before {
   }
 
 
+  .darkTheme .card .social-link1 svg {
+    fill: #fff;
+  }
+
+  .darkTheme .card .social-link1:hover svg {
+    fill: #000;
+  }
+
+
   .smooth {
     transition: background-color 0.1ms ease, color 0.1s ease;
   }
@@ -2144,6 +2174,7 @@ input:checked+.slider:before {
     justify-content: center;
     align-items: center;
     gap: 5px
+
   }
 
   /* Your CSS rules for extra small devices */
@@ -2155,6 +2186,7 @@ input:checked+.slider:before {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    overflow: hidden;
   }
 
   .socialHide {
@@ -2260,7 +2292,7 @@ input:checked+.slider:before {
     width: 100%;
     overflow: hidden;
     flex-direction: column-reverse;
-    margin-top: 3em;
+    margin-top: 3.5em;
     padding: 0;
 
   }
@@ -2551,7 +2583,7 @@ input:checked+.slider:before {
 
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 991px) and (max-width: 1199px) {
 
   .darkTheme {
     position: absolute;
@@ -2562,9 +2594,14 @@ input:checked+.slider:before {
     margin-bottom: 150em;
   }
 
+
+  .darkTheme .card .social-link1 svg {
+    fill: #fff;
+  }
+
   .sidebar .handleThemes {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px
@@ -2598,6 +2635,7 @@ input:checked+.slider:before {
   }
 
 }
+
 
 @media (min-width: 1199px) and (max-width: 1499px) {
   .darkTheme {
@@ -2747,9 +2785,9 @@ input:checked+.slider:before {
 }
 
 .l {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 0.75em;
-  box-shadow: 0.125em 0.125em 0 0.125em rgba(0,0,0,0.3) inset;
+  box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.3) inset;
   color: #fdea7b;
   display: inline-flex;
   align-items: center;
@@ -2761,9 +2799,10 @@ input:checked+.slider:before {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  }
+}
 
-.l:before, .l:after {
+.l:before,
+.l:after {
   content: "";
   display: block;
 }
@@ -2778,9 +2817,9 @@ input:checked+.slider:before {
 }
 
 .l:after {
-  background: linear-gradient(transparent 50%, rgba(0,0,0,0.15) 0) 0 50% / 50% 100%,
-		repeating-linear-gradient(90deg,#bbb 0,#bbb,#bbb 20%,#999 20%,#999 40%) 0 50% / 50% 100%,
-		radial-gradient(circle at 50% 50%,#888 25%, transparent 26%);
+  background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.15) 0) 0 50% / 50% 100%,
+    repeating-linear-gradient(90deg, #bbb 0, #bbb, #bbb 20%, #999 20%, #999 40%) 0 50% / 50% 100%,
+    radial-gradient(circle at 50% 50%, #888 25%, transparent 26%);
   background-repeat: no-repeat;
   border: 0.25em solid transparent;
   border-left: 0.4em solid #d8d8d8;
@@ -2792,10 +2831,11 @@ input:checked+.slider:before {
   height: 1em;
   box-sizing: border-box;
 }
+
 /* Checked */
 .l:checked {
-  background-color: rgba(0,0,0,0.45);
-  box-shadow: 0.125em 0.125em 0 0.125em rgba(0,0,0,0.1) inset;
+  background-color: rgba(0, 0, 0, 0.45);
+  box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.1) inset;
 }
 
 .l:checked:before {
@@ -2807,8 +2847,81 @@ input:checked+.slider:before {
   border-left-color: currentColor;
   transform: translateX(-2.5%) rotateY(180deg);
 }
+
 /* Other States */
 .l:focus {
-	/* Usually an anti-A11Y practice but set to remove an annoyance just for this demo */
+  /* Usually an anti-A11Y practice but set to remove an annoyance just for this demo */
   outline: 0;
+}
+
+/* BackToTop.module.css */
+
+.backToTop {
+  z-index: 9999999999;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+
+.arrow path {
+  fill: white;
+}
+
+.backToTop:hover .arrow {
+  animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* //SCROLLBAR */
+
+/* Customize the scrollbar track in Firefox */
+* {
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+  scrollbar-color: var(--accent-color); /* Set the colors of the track and thumb */
+}
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Set the color of the thumb */
+  border-radius: 6px; /* Set the rounded corners for the thumb */
+}
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #eee; /* Set the color of the track */
+}
+
+/* Customize the scrollbar corner */
+::-webkit-scrollbar-corner {
+  background: transparent; /* Set the corner color */
 }
