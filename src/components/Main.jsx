@@ -12,7 +12,7 @@ import Projects from "./Projects";
 import ContactMe from "./ContactMe";
 import BackToTop from "./BackToTop";
 
-const Main = ({ toggleNav, isClicked, setClicked }) => {
+const Main = ({ toggleNav, isClicked, setClicked, setIsOpen, isOpen }) => {
   const { darkMode } = useContext(DarkContext);
   const [colorPickerOpen, setcolorPickerOpen] = useState(true);
 
@@ -32,19 +32,25 @@ const Main = ({ toggleNav, isClicked, setClicked }) => {
               toggle={setClicked}
             />
           </div>
-          {/* DARK THEME TOGGLE  */}
-          
+          {/* ==== DARK THEME TOGGLE ==== */}
+
           <div className="handleThemes">
             <LightToDark handleColorPicker={handleColorPicker} />
-          </div>
 
-          {/* Socails */}
+            {/*==== Color Picker Button ====*/}
+            <button
+              // className={styles.primaryBtn}
+              className="colormap-btn"
+              onClick={() => setIsOpen(!isOpen)}
+            ></button>
+          </div>
+          {/* ==== Socails ==== */}
           <div className="socialHide">
             <Socials />
           </div>
         </div>
         <div id="home" className="content">
-        <BackToTop/>
+          <BackToTop />
           <Home
             colorPickerOpen={colorPickerOpen}
             handleColorPicker={handleColorPicker}

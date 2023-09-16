@@ -1,32 +1,45 @@
-import React from "react";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
+import React, { useContext } from "react";
+import styles from "./Modal.module.css";
+import { RiCloseLine } from "react-icons/ri";
 import ColorPicker from "./ColorsMap";
+import { DarkContext } from "../context/ThemeContext";
 
-const ColorModal = ({ show, onHide }) => {
+const Modal = ({ setIsOpen }) => {
+  const { resetAccentColor } = useContext(DarkContext);
   return (
     <>
-      <Modal
-        show={show}
-        onHide={onHide}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Select a Color to Customise
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <ColorPicker />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button>Close</Button>
-        </Modal.Footer>
-      </Modal>
+      {/* <div className={styles.darkBG} onClick={() => setIsOpen(false)} /> */}
+      <div className={styles.centered}>
+        <div className={styles.modal}>
+          <div className={styles.modalHeader}>
+            <h5 className={styles.heading}>Customise Your Accent</h5>
+          </div>
+          <button className={styles.closeBtn} onClick={() => setIsOpen(false)}>
+            <RiCloseLine style={{ marginBottom: "-3px" }} />
+          </button>
+          <div className={styles.modalContent}>
+            <ColorPicker />
+          </div>
+          <div className={styles.modalActions}>
+            <div className={styles.actionsContainer}>
+              <button
+                className={styles.deleteBtn}
+                onClick={resetAccentColor}
+                >
+                Reset
+              </button>
+              <button
+                className={styles.cancelBtn}
+                onClick={() => setIsOpen(false)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
 
-export default ColorModal;
+export default Modal;

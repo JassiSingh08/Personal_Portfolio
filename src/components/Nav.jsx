@@ -1,9 +1,6 @@
-import React, { useContext } from "react";
-import { DarkContext } from "../context/ThemeContext";
+import React from "react";
 
 const Nav = ({ isNavOpen, setNavOpen, toggleHamClick }) => {
-  const { darkMode } = useContext(DarkContext);
-  console.log(darkMode);
 
   const closeNavbar = () => {
     setNavOpen(!isNavOpen);

@@ -61,14 +61,14 @@ const ColorPicker = () => {
   ];
 
   return (
-    <div className="ColorMap">
+    // <div className="ColorMap">
       <TwitterPicker
         onChange={handleColorChange}
         colors={CustomPresets}
         triangle="hide"
         width="250px"
       />
-    </div>
+    // </div>
   );
 };
 
