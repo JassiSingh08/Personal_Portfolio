@@ -1,6 +1,5 @@
 import React from "react";
 import github from "../Assets/github-mark.png";
-import openLink from "../Assets/open-link2.png";
 
 const ProjectCard = ({ data }) => {
   return (
