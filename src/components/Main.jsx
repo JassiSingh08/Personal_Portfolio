@@ -11,6 +11,7 @@ import AboutMe from "../pages//AboutMe";
 import Skills from "../pages//Skills";
 import Projects from "../pages//Projects";
 import ContactMe from "../pages//ContactMe";
+import Check from "./check";
 
 const Main = ({ toggleNav, isClicked, setClicked, setIsOpen, isOpen }) => {
   const { darkMode } = useContext(DarkContext);
@@ -51,19 +52,24 @@ const Main = ({ toggleNav, isClicked, setClicked, setIsOpen, isOpen }) => {
         </div>
         <div id="home" className="content">
           <BackToTop />
+
           <Home
             colorPickerOpen={colorPickerOpen}
             handleColorPicker={handleColorPicker}
           />
+
           <div id="about" className="am-c">
             <AboutMe />
           </div>
+
           <div id="skills" className="s-c">
             <Skills />
           </div>
+
           <div id="projects" className="pc-c">
             <Projects />
           </div>
+
           <div id="contact" className="cm-c">
             <ContactMe />
           </div>

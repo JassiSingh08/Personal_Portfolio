@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import slideData from "../data/SlideData";
 import ProjectCard from "../components/ProjectCard";
+import Check from "../components/check";
 
 const Projects = () => {
   const categories = ["All", "Frontend", "MERN"];
@@ -20,24 +21,30 @@ const Projects = () => {
   return (
     <>
       <div className="container">
-        <div className="tabs">
-          {categories.map((category, index) => (
-            <React.Fragment key={index}>
-              <input
-                type="radio"
-                id={`radio-${index + 1}`}
-                name="tabs"
-                checked={selectedCategory === category}
-                onChange={() => handleCategory(category)}
-              />
-              <label className={`tab ${selectedCategory === category ? 'glider' : ''}`} htmlFor={`radio-${index + 1}`}>
-                {category}
-              </label>
-            </React.Fragment>
-          ))}
-          {/* <span className="glider"></span> */}
-        </div>
-      </div>
+        <Check>
+          <div className="tabs">
+            {categories.map((category, index) => (
+              <React.Fragment key={index}>
+                <input
+                  type="radio"
+                  id={`radio-${index + 1}`}
+                  name="tabs"
+                  checked={selectedCategory === category}
+                  onChange={() => handleCategory(category)}
+                />
+                <label
+                  className={`tab ${
+                    selectedCategory === category ? "glider" : ""
+                  }`}
+                  htmlFor={`radio-${index + 1}`}
+                >
+                  {category}
+                </label>
+              </React.Fragment>
+            ))}
+          </div>
+        </Check>
+      </div>{" "}
       {filterCategories.map((slide, i) => (
         <ProjectCard data={slide} key={i} />
       ))}
