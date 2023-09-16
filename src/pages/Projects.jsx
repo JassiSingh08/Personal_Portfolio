@@ -47,8 +47,7 @@ const Projects = () => {
       </div>{" "}
       {filterCategories.map((slide, i) => (
         <ProjectCard data={slide} key={i} />
-      ))}
-    </>
+      ))}    </>
   );
 };
 

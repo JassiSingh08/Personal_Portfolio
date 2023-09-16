@@ -1,34 +1,38 @@
 const slideData = [
   {
+    name: "Meddy Buddy",
+    src: require("../Assets/MeddyBuddy.png"),
+    category: "MERN", // Add the category property
+    gitLink: "https://github.com/JassiSingh08/MeddyBuddy-MERN-APP",
+    desc: "Book your doctor from your convenience"
+  },
+  {
     name: "Ai Image Generator",
-    src: "https://picsum.photos/500/600",
+    src: require("../Assets/Ai-Generator.png"),
     category: "Frontend", // Add the category property
-    gitLink: "https://github.com/JassiSingh08/ai-image-generator"
+    gitLink: "https://github.com/JassiSingh08/ai-image-generator",
+    desc: "Generate Your Thoughts"
   },
   {
-    name: "Project 2",
-    src: "https://picsum.photos/500/600",
+    name: "NotesKeep",
+    src: require("../Assets/NotesKeep.png"),
     category: "MERN", // Add the category property
+    gitLink: "https://github.com/JassiSingh08/Noteskeep",
+    desc: "Access Your Notes from Anywhere"
   },
   {
-    name: "Project 3",
-    src: "https://picsum.photos/500/600",
+    name: "Gym Website",
+    src: require("../Assets/Gym-Website.png"),
     category: "Frontend", // Add the category property
+    gitLink: "https://github.com/JassiSingh08/gym-website",
+    desc: "All Your Exercise Needs at One Place"
   },
   {
-    name: "Project 2",
-    src: "https://picsum.photos/500/600",
-    category: "MERN", // Add the category property
-  },
-  {
-    name: "Project 3",
-    src: "https://picsum.photos/500/600",
+    name: "Snake-Game",
+    src: require("../Assets/SnakeGame.png"),
     category: "Frontend", // Add the category property
-  },
-  {
-    name: "Project 1",
-    src: "https://picsum.photos/500/600",
-    category: "MERN", // Add the category property
+    gitLink: "https://github.com/JassiSingh08/Snake-Game",
+    desc: "Your Favourite Retro Game"
   },
 ];
 

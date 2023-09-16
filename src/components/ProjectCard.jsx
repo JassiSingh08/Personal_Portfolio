@@ -10,6 +10,7 @@ const ProjectCard = ({ data }) => {
         <div className="project-content">
           <div className="content-title">
             <p className="title">{data.name}</p>
+            <p className="sub-title">~ {data.desc}</p>
             <p className="sub-title">~ {data.category}</p>
           </div>
           <div className="content-link">
@@ -18,11 +19,11 @@ const ProjectCard = ({ data }) => {
                 <img src={github} alt="github" />
               </a>
             </div>
-            <div className="icon2">
+{/*             <div className="icon2">
               <a href="/" target="_blank">
                 <img src={openLink} alt="openLink" />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
         <img src={data.src} alt={data.name} />

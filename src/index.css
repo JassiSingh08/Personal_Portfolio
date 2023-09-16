@@ -961,9 +961,10 @@ body {
 }
 
 .article-card {
-  width: 350px;
+  border: 5px solid rgba(0, 0, 0, 0.304);
+  width: 400px;
   height: 250px;
-  margin: 0.8em 0.25em;
+  margin: 0.8em 0.3em;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
@@ -981,7 +982,6 @@ body {
 .article-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .article-card .project-content {
@@ -1017,7 +1017,7 @@ body {
   font-family: 'Varela Round', sans-serif;
   margin: 0;
   position: relative;
-  bottom: -100px;
+  bottom: -110px;
 }
 
 .article-card .sub-title {
@@ -1050,7 +1050,7 @@ body {
 
 .article-card:hover .sub-title,
 .article-card:hover .title {
-  transform: translateY(-100px);
+  transform: translateY(-120px);
   transition: all 1s cubic-bezier(.46, 1.48, .18, .81);
   transition-delay: 0.1s;
 }
@@ -1695,13 +1695,17 @@ body {
   /*  */
 
   .center {
-    width: 50vw;
+    width: 90vw;
     margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1em;
   }
 
   .article-card {
-    width: 300px;
-    height: 200px;
+    width: 320px;
+    height: 220px;
   }
 
   .article-card .project-content {
@@ -1709,6 +1713,10 @@ body {
     height: auto;
     width: 100%;
     bottom: -25px;
+  }
+
+  .article-card:hover .project-content {
+    bottom: 0;
   }
 
   .article-card .sub-title {
@@ -2107,20 +2115,37 @@ body {
   /*  */
 
   .center {
-    width: 50vw;
+    width: 90vw;
     margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1em;
   }
 
   .article-card {
-    width: 300px;
-    height: 200px;
+    width: 500px;
+    height: 300px;
   }
 
-  .article-card .project-content {
+  .article-card:hover .sub-title,
+  .article-card:hover .title {
+    transform: translateY(-120px);
+    transition: all 1s cubic-bezier(.46, 1.48, .18, .81);
+    transition-delay: 0.1s;
+  }
+
+  .article-card:hover .content-link .icon1,
+  .article-card:hover .content-link .icon2 {
+    transform: translateY(-120px);
+    transition: all 1s cubic-bezier(.46, 1.48, .18, .81);
+  }
+
+  F .article-card .project-content {
     padding: 20px;
     height: auto;
     width: 100%;
-    bottom: -25px;
+    bottom: -35px;
   }
 
   .article-card .sub-title {
@@ -2509,8 +2534,12 @@ body {
   /*  */
 
   .center {
-    width: 50vw;
+    width: 90vw;
     margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1em;
   }
 
   .article-card {
@@ -2642,14 +2671,34 @@ body {
   }
 
   .center {
-    width: 50vw;
+    width: 40vw;
     margin-bottom: 1em;
+    margin-left: 1em;
   }
 
   .article-card {
     width: 600px;
     height: 400px;
   }
+
+  .article-card:hover .sub-title,
+  .article-card:hover .title,
+  .article-card:hover .content-link .icon1 {
+    transform: translateY(-250px);
+    transition: all 1s cubic-bezier(.46, 1.48, .18, .81);
+    transition-delay: 0.1s;
+  }
+
+  .article-card .sub-title,
+  .article-card .title,
+  .article-card .content-link {
+    font-family: 'Varela Round', sans-serif;
+    margin: 0;
+    position: relative;
+    bottom: -180px;
+  }
+
+
 
   .article-card .project-content {
     padding: 20px;
@@ -2680,6 +2729,60 @@ body {
     margin-bottom: 150em;
   }
 
+  @media (min-width: 991px) and (max-width: 1199px) {
+
+    .darkTheme {
+      position: absolute;
+    }
+
+    .darkTheme .colorPicker {
+      position: absolute;
+      margin-bottom: 150em;
+    }
+
+
+    .darkTheme .card .social-link1 svg {
+      fill: #fff;
+    }
+
+    .sidebar .handleThemes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px
+    }
+
+    .center {
+      width: 55vw;
+      margin-bottom: 1em;
+      margin-left: 1em;
+    }
+
+    .article-card {
+      width: 600px;
+      height: 400px;
+    }
+
+    .article-card:hover .sub-title,
+    .article-card:hover .title,
+    .article-card:hover .content-link .icon1 {
+      transform: translateY(-180px);
+      transition: all 1s cubic-bezier(.46, 1.48, .18, .81);
+      transition-delay: 0.1s;
+    }
+
+    .article-card .sub-title {
+      font-size: 22px;
+      padding: 2px 0;
+    }
+
+    .article-card .title {
+      letter-spacing: 1px;
+      font-size: 30px;
+    }
+
+  }
 }
 
 @media (min-width: 2000px) {

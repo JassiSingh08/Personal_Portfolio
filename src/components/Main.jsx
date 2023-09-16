@@ -11,7 +11,6 @@ import AboutMe from "../pages//AboutMe";
 import Skills from "../pages//Skills";
 import Projects from "../pages//Projects";
 import ContactMe from "../pages//ContactMe";
-import Check from "./check";
 
 const Main = ({ toggleNav, isClicked, setClicked, setIsOpen, isOpen }) => {
   const { darkMode } = useContext(DarkContext);
