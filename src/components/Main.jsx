@@ -4,13 +4,13 @@ import { DarkContext } from "../context/ThemeContext";
 // Components
 import LightToDark from "./LightToDark";
 import Socials from "./Socials";
-// PAGES
-import Home from "./Home";
-import AboutMe from "./AboutMe";
-import Skills from "./Skills";
-import Projects from "./Projects";
-import ContactMe from "./ContactMe";
 import BackToTop from "./BackToTop";
+// PAGES
+import Home from "../pages/Home";
+import AboutMe from "../pages//AboutMe";
+import Skills from "../pages//Skills";
+import Projects from "../pages//Projects";
+import ContactMe from "../pages//ContactMe";
 
 const Main = ({ toggleNav, isClicked, setClicked, setIsOpen, isOpen }) => {
   const { darkMode } = useContext(DarkContext);

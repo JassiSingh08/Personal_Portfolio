@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import slideData from "../data/SlideData";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../components/ProjectCard";
 
 const Projects = () => {
   const categories = ["All", "Frontend", "MERN"];

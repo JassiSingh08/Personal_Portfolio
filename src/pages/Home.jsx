@@ -1,9 +1,9 @@
 import React from "react";
 import profile_pic from "../Assets/Profile_Pic.png";
-import MERN from "./MERN";
+import MERN from "../components/MERN";
 import { TypeAnimation } from "react-type-animation";
-import Socials from "./Socials";
-import ColorPicker from "./ColorsMap";
+import Socials from "../components/Socials";
+import ColorPicker from "../components/ColorsMap";
 import CV from "../Assets/CV.png";
 
 const Home = ({ colorPickerOpen, handleColorPicker }) => {

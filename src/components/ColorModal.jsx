@@ -8,7 +8,6 @@ const Modal = ({ setIsOpen }) => {
   const { resetAccentColor } = useContext(DarkContext);
   return (
     <>
-      {/* <div className={styles.darkBG} onClick={() => setIsOpen(false)} /> */}
       <div className={styles.centered}>
         <div className={styles.modal}>
           <div className={styles.modalHeader}>
