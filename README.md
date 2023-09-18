@@ -1,7 +1,3 @@
-Certainly! Below is a sample README.md file for a personal portfolio website built using React and various hooks like useState, useEffect, useRef, and useContext. The portfolio also includes the functionality to change themes and accent colors, and it's fully responsive using pure CSS media queries without any CSS frameworks.
-
----
-
 # Personal Portfolio Website
 
 This is a personal portfolio website built using React and several React hooks such as useState, useEffect, useRef, and useContext. The portfolio showcases my skills, projects, and personal information while offering a unique feature for users to customize the website's theme and accent colors according to their preferences.
